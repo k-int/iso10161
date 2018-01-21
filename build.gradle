@@ -23,6 +23,9 @@ dependencies {
     compile group: 'com.k_int', name: 'A2J', version: '1.0'
 }
 
+
+def generatedSrcDir = new File(buildDir, "generated/src/main/java/")
+
 group = 'com.k_int'
 sourceCompatibility = 1.7
 version = '1.0'
@@ -36,6 +39,12 @@ jar {
 task compileASN() {
   doLast() {
     System.out.println("complileASN()");
+
+    if( !generatedSrcDir.exists() ) {
+      // Create all folders up-to and including B
+      generatedSrcDir.mkdirs()
+    }
+
     String[] args = ['./ill9702.asn'];
     runParser.main(args);
   }
