@@ -1,0 +1,51 @@
+// https://docs.gradle.org/current/userguide/tutorial_java_projects.html
+import com.k_int.codec.comp.runParser;
+
+apply plugin: 'java'
+apply plugin: 'maven'
+
+buildscript {
+  repositories {
+    mavenCentral()
+    mavenLocal()
+  }
+  dependencies {
+    classpath group: 'com.k_int', name: 'A2J', version: '1.0'
+  }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'log4j', name: 'log4j', version: '1.2.5'
+    compile group: 'com.k_int', name: 'A2J', version: '1.0'
+}
+
+group = 'com.k_int'
+sourceCompatibility = 1.7
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart',
+                   'Implementation-Version': version
+    }
+}
+
+task compileASN() {
+  doLast() {
+    System.out.println("complileASN()");
+    String[] args = ['./ill9702.asn'];
+    runParser.main(args);
+  }
+}
+
+// See https://docs.gradle.org/current/userguide/maven_plugin.html#uploading_to_maven_repositories
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file://~/.m2/repository/")
+        }
+    }
+}
