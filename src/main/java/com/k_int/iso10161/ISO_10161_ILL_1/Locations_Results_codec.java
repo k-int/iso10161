@@ -12,8 +12,8 @@ public class Locations_Results_codec extends base_codec
   private static Log log = LogFactory.getLog(Locations_Results_codec.class);
   public static Locations_Results_codec me = null;
 
-  private locations_inline32_codec i_locations_inline32_codec = locations_inline32_codec.getCodec();
   private Reason_Locs_Provided_codec i_reason_locs_provided_codec = Reason_Locs_Provided_codec.getCodec();
+  private locations_inline32_codec i_locations_inline32_codec = locations_inline32_codec.getCodec();
 
   public synchronized static Locations_Results_codec getCodec()
   {

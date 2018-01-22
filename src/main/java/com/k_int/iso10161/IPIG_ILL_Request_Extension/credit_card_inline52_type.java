@@ -38,10 +38,10 @@ public class credit_card_inline52_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("type"=type);
-        sw.write("card_number"=card_number);
-        sw.write("expiry_date"=expiry_date);
-        sw.write("name_on_card"=name_on_card);
+        sw.write("type="+type);
+        sw.write("card_number="+card_number);
+        sw.write("expiry_date="+expiry_date);
+        sw.write("name_on_card="+name_on_card);
         sw.write("\n}\n");
         return sw.toString();
     }

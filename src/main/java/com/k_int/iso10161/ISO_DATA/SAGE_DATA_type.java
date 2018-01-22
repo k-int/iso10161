@@ -42,10 +42,10 @@ public class SAGE_DATA_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("illNumber"=illNumber);
-        sw.write("status"=status);
-        sw.write("problemStatus"=problemStatus);
-        sw.write("iso_data"=iso_data);
+        sw.write("illNumber="+illNumber);
+        sw.write("status="+status);
+        sw.write("problemStatus="+problemStatus);
+        sw.write("iso_data="+iso_data);
         sw.write("\n}\n");
         return sw.toString();
     }

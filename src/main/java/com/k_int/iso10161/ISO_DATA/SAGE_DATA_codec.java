@@ -22,8 +22,8 @@ public class SAGE_DATA_codec extends base_codec
   private static Log log = LogFactory.getLog(SAGE_DATA_codec.class);
   public static SAGE_DATA_codec me = null;
 
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
   private OctetString_codec i_octetstring_codec = OctetString_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
 
   public synchronized static SAGE_DATA_codec getCodec()
   {

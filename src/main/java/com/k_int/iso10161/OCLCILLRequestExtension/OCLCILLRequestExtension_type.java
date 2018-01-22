@@ -54,14 +54,14 @@ public class OCLCILLRequestExtension_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("clientDepartment"=clientDepartment);
-        sw.write("paymentMethod"=paymentMethod);
-        sw.write("uniformTitle"=uniformTitle);
-        sw.write("dissertation"=dissertation);
-        sw.write("issueNumber"=issueNumber);
-        sw.write("volume"=volume);
-        sw.write("affiliations"=affiliations);
-        sw.write("source"=source);
+        sw.write("clientDepartment="+clientDepartment);
+        sw.write("paymentMethod="+paymentMethod);
+        sw.write("uniformTitle="+uniformTitle);
+        sw.write("dissertation="+dissertation);
+        sw.write("issueNumber="+issueNumber);
+        sw.write("volume="+volume);
+        sw.write("affiliations="+affiliations);
+        sw.write("source="+source);
         sw.write("\n}\n");
         return sw.toString();
     }

@@ -29,8 +29,8 @@ public class State_Transition_Prohibited_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("aPDU_type"=aPDU_type);
-        sw.write("current_state"=current_state);
+        sw.write("aPDU_type="+aPDU_type);
+        sw.write("current_state="+current_state);
         sw.write("\n}\n");
         return sw.toString();
     }

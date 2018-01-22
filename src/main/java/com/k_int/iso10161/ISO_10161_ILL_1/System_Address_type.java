@@ -29,8 +29,8 @@ public class System_Address_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("telecom_service_identifier"=telecom_service_identifier);
-        sw.write("telecom_service_address"=telecom_service_address);
+        sw.write("telecom_service_identifier="+telecom_service_identifier);
+        sw.write("telecom_service_address="+telecom_service_address);
         sw.write("\n}\n");
         return sw.toString();
     }

@@ -29,8 +29,8 @@ public class Service_Date_Time_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("date_time_of_this_service"=date_time_of_this_service);
-        sw.write("date_time_of_original_service"=date_time_of_original_service);
+        sw.write("date_time_of_this_service="+date_time_of_this_service);
+        sw.write("date_time_of_original_service="+date_time_of_original_service);
         sw.write("\n}\n");
         return sw.toString();
     }

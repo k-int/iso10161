@@ -14,8 +14,8 @@ public class OCLCSpecificResults_codec extends base_codec
   private static Log log = LogFactory.getLog(OCLCSpecificResults_codec.class);
   public static OCLCSpecificResults_codec me = null;
 
-  private OCLCSpecificStatus_codec i_oclcspecificstatus_codec = OCLCSpecificStatus_codec.getCodec();
   private ReasonInReviewList_codec i_reasoninreviewlist_codec = ReasonInReviewList_codec.getCodec();
+  private OCLCSpecificStatus_codec i_oclcspecificstatus_codec = OCLCSpecificStatus_codec.getCodec();
 
   public synchronized static OCLCSpecificResults_codec getCodec()
   {

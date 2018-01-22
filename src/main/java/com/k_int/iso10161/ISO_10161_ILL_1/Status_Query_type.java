@@ -49,13 +49,13 @@ public class Status_Query_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("protocol_version_num"=protocol_version_num);
-        sw.write("transaction_id"=transaction_id);
-        sw.write("service_date_time"=service_date_time);
-        sw.write("requester_id"=requester_id);
-        sw.write("responder_id"=responder_id);
-        sw.write("note"=note);
-        sw.write("status_query_extensions"=status_query_extensions);
+        sw.write("protocol_version_num="+protocol_version_num);
+        sw.write("transaction_id="+transaction_id);
+        sw.write("service_date_time="+service_date_time);
+        sw.write("requester_id="+requester_id);
+        sw.write("responder_id="+responder_id);
+        sw.write("note="+note);
+        sw.write("status_query_extensions="+status_query_extensions);
         sw.write("\n}\n");
         return sw.toString();
     }

@@ -7,7 +7,7 @@ import com.k_int.codec.runtime.*;
 
 public class damaged_portion_inline24_type extends ChoiceType implements Serializable 
 {
-  private transient static LoggingContext log = LogFactory.getLog(damaged_portion_inline24_type.class);
+  private transient static Log log = LogFactory.getLog(damaged_portion_inline24_type.class);
   public transient static final int complete_document_CID = 0;
   public transient static final int specific_units_CID = 1;
 

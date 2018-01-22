@@ -12,20 +12,20 @@ public class Shipped_codec extends base_codec
   private static Log log = LogFactory.getLog(Shipped_codec.class);
   public static Shipped_codec me = null;
 
+  private shipped_extensions_inline4_codec i_shipped_extensions_inline4_codec = shipped_extensions_inline4_codec.getCodec();
   private Supply_Details_codec i_supply_details_codec = Supply_Details_codec.getCodec();
   private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
-  private System_Address_codec i_system_address_codec = System_Address_codec.getCodec();
   private Transaction_Id_codec i_transaction_id_codec = Transaction_Id_codec.getCodec();
-  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
-  private Responder_Optional_Messages_Type_codec i_responder_optional_messages_type_codec = Responder_Optional_Messages_Type_codec.getCodec();
-  private Postal_Address_codec i_postal_address_codec = Postal_Address_codec.getCodec();
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
-  private Shipped_Service_Type_codec i_shipped_service_type_codec = Shipped_Service_Type_codec.getCodec();
-  private Supplemental_Item_Description_codec i_supplemental_item_description_codec = Supplemental_Item_Description_codec.getCodec();
-  private Transaction_Type_codec i_transaction_type_codec = Transaction_Type_codec.getCodec();
   private Client_Id_codec i_client_id_codec = Client_Id_codec.getCodec();
+  private Supplemental_Item_Description_codec i_supplemental_item_description_codec = Supplemental_Item_Description_codec.getCodec();
+  private Postal_Address_codec i_postal_address_codec = Postal_Address_codec.getCodec();
+  private System_Address_codec i_system_address_codec = System_Address_codec.getCodec();
+  private Shipped_Service_Type_codec i_shipped_service_type_codec = Shipped_Service_Type_codec.getCodec();
   private Service_Date_Time_codec i_service_date_time_codec = Service_Date_Time_codec.getCodec();
-  private shipped_extensions_inline4_codec i_shipped_extensions_inline4_codec = shipped_extensions_inline4_codec.getCodec();
+  private Transaction_Type_codec i_transaction_type_codec = Transaction_Type_codec.getCodec();
+  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
+  private Responder_Optional_Messages_Type_codec i_responder_optional_messages_type_codec = Responder_Optional_Messages_Type_codec.getCodec();
 
   public synchronized static Shipped_codec getCodec()
   {

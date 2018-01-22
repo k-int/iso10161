@@ -12,8 +12,8 @@ public class Electronic_Delivery_Service_codec extends base_codec
   private static Log log = LogFactory.getLog(Electronic_Delivery_Service_codec.class);
   public static Electronic_Delivery_Service_codec me = null;
 
-  private document_type_inline28_codec i_document_type_inline28_codec = document_type_inline28_codec.getCodec();
   private e_delivery_service_inline27_codec i_e_delivery_service_inline27_codec = e_delivery_service_inline27_codec.getCodec();
+  private document_type_inline28_codec i_document_type_inline28_codec = document_type_inline28_codec.getCodec();
   private e_delivery_details_inline29_codec i_e_delivery_details_inline29_codec = e_delivery_details_inline29_codec.getCodec();
   private ISO_Time_codec i_iso_time_codec = ISO_Time_codec.getCodec();
   private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();

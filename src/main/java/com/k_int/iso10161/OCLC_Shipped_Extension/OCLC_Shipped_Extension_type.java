@@ -26,7 +26,7 @@ public class OCLC_Shipped_Extension_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("paymentMethod"=paymentMethod);
+        sw.write("paymentMethod="+paymentMethod);
         sw.write("\n}\n");
         return sw.toString();
     }

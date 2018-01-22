@@ -29,8 +29,8 @@ public class Unfilled_Results_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("reason_unfilled"=reason_unfilled);
-        sw.write("locations"=locations);
+        sw.write("reason_unfilled="+reason_unfilled);
+        sw.write("locations="+locations);
         sw.write("\n}\n");
         return sw.toString();
     }

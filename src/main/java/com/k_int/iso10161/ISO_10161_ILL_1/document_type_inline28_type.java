@@ -29,8 +29,8 @@ public class document_type_inline28_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("document_type_id"=document_type_id);
-        sw.write("document_type_parameters"=document_type_parameters);
+        sw.write("document_type_id="+document_type_id);
+        sw.write("document_type_parameters="+document_type_parameters);
         sw.write("\n}\n");
         return sw.toString();
     }

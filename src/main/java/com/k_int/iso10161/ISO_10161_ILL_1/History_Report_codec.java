@@ -12,10 +12,10 @@ public class History_Report_codec extends base_codec
   private static Log log = LogFactory.getLog(History_Report_codec.class);
   public static History_Report_codec me = null;
 
-  private Shipped_Service_Type_codec i_shipped_service_type_codec = Shipped_Service_Type_codec.getCodec();
-  private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
-  private Transaction_Results_codec i_transaction_results_codec = Transaction_Results_codec.getCodec();
   private ISO_Date_codec i_iso_date_codec = ISO_Date_codec.getCodec();
+  private Shipped_Service_Type_codec i_shipped_service_type_codec = Shipped_Service_Type_codec.getCodec();
+  private Transaction_Results_codec i_transaction_results_codec = Transaction_Results_codec.getCodec();
+  private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
   private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
   private Enumerated_codec i_enumerated_codec = Enumerated_codec.getCodec();
 

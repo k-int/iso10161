@@ -37,10 +37,10 @@ public class Transaction_Id_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("initial_requester_id"=initial_requester_id);
-        sw.write("transaction_group_qualifier"=transaction_group_qualifier);
-        sw.write("transaction_qualifier"=transaction_qualifier);
-        sw.write("sub_transaction_qualifier"=sub_transaction_qualifier);
+        sw.write("initial_requester_id="+initial_requester_id);
+        sw.write("transaction_group_qualifier="+transaction_group_qualifier);
+        sw.write("transaction_qualifier="+transaction_qualifier);
+        sw.write("sub_transaction_qualifier="+sub_transaction_qualifier);
         sw.write("\n}\n");
         return sw.toString();
     }

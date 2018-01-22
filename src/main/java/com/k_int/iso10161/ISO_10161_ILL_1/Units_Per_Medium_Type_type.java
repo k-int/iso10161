@@ -29,8 +29,8 @@ public class Units_Per_Medium_Type_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("medium"=medium);
-        sw.write("no_of_units"=no_of_units);
+        sw.write("medium="+medium);
+        sw.write("no_of_units="+no_of_units);
         sw.write("\n}\n");
         return sw.toString();
     }

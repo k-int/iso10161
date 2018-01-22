@@ -12,8 +12,8 @@ public class Amount_codec extends base_codec
   private static Log log = LogFactory.getLog(Amount_codec.class);
   public static Amount_codec me = null;
 
-  private AmountString_codec i_amountstring_codec = AmountString_codec.getCodec();
   private PrintableString_codec i_printablestring_codec = PrintableString_codec.getCodec();
+  private AmountString_codec i_amountstring_codec = AmountString_codec.getCodec();
 
   public synchronized static Amount_codec getCodec()
   {

@@ -53,14 +53,14 @@ public class Third_Party_Info_Type_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("permission_to_forward"=permission_to_forward);
-        sw.write("permission_to_chain"=permission_to_chain);
-        sw.write("permission_to_partition"=permission_to_partition);
-        sw.write("permission_to_change_send_to_list"=permission_to_change_send_to_list);
-        sw.write("initial_requester_address"=initial_requester_address);
-        sw.write("preference"=preference);
-        sw.write("send_to_list"=send_to_list);
-        sw.write("already_tried_list"=already_tried_list);
+        sw.write("permission_to_forward="+permission_to_forward);
+        sw.write("permission_to_chain="+permission_to_chain);
+        sw.write("permission_to_partition="+permission_to_partition);
+        sw.write("permission_to_change_send_to_list="+permission_to_change_send_to_list);
+        sw.write("initial_requester_address="+initial_requester_address);
+        sw.write("preference="+preference);
+        sw.write("send_to_list="+send_to_list);
+        sw.write("already_tried_list="+already_tried_list);
         sw.write("\n}\n");
         return sw.toString();
     }

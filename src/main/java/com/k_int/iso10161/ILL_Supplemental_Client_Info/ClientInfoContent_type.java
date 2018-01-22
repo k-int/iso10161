@@ -7,7 +7,7 @@ import com.k_int.codec.runtime.*;
 
 public class ClientInfoContent_type extends ChoiceType implements Serializable 
 {
-  private transient static LoggingContext log = LogFactory.getLog(ClientInfoContent_type.class);
+  private transient static Log log = LogFactory.getLog(ClientInfoContent_type.class);
   public transient static final int stringcontent_CID = 0;
   public transient static final int postaladdress_CID = 1;
   public transient static final int nameorid_CID = 2;

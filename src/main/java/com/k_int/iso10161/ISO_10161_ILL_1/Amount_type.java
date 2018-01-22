@@ -29,8 +29,8 @@ public class Amount_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("currency_code"=currency_code);
-        sw.write("monetary_value"=monetary_value);
+        sw.write("currency_code="+currency_code);
+        sw.write("monetary_value="+monetary_value);
         sw.write("\n}\n");
         return sw.toString();
     }

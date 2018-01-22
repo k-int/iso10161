@@ -29,8 +29,8 @@ public class Already_Forwarded_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("responder_id"=responder_id);
-        sw.write("responder_address"=responder_address);
+        sw.write("responder_id="+responder_id);
+        sw.write("responder_address="+responder_address);
         sw.write("\n}\n");
         return sw.toString();
     }

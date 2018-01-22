@@ -7,7 +7,7 @@ import com.k_int.codec.runtime.*;
 
 public class User_Error_Report_type extends ChoiceType implements Serializable 
 {
-  private transient static LoggingContext log = LogFactory.getLog(User_Error_Report_type.class);
+  private transient static Log log = LogFactory.getLog(User_Error_Report_type.class);
   public transient static final int already_forwarded_CID = 0;
   public transient static final int intermediary_problem_CID = 1;
   public transient static final int security_problem_CID = 2;

@@ -12,11 +12,11 @@ public class Third_Party_Info_Type_codec extends base_codec
   private static Log log = LogFactory.getLog(Third_Party_Info_Type_codec.class);
   public static Third_Party_Info_Type_codec me = null;
 
-  private BOOL_codec i_bool_codec = BOOL_codec.getCodec();
-  private System_Address_codec i_system_address_codec = System_Address_codec.getCodec();
-  private Send_To_List_Type_codec i_send_to_list_type_codec = Send_To_List_Type_codec.getCodec();
   private Already_Tried_List_Type_codec i_already_tried_list_type_codec = Already_Tried_List_Type_codec.getCodec();
   private Enumerated_codec i_enumerated_codec = Enumerated_codec.getCodec();
+  private BOOL_codec i_bool_codec = BOOL_codec.getCodec();
+  private Send_To_List_Type_codec i_send_to_list_type_codec = Send_To_List_Type_codec.getCodec();
+  private System_Address_codec i_system_address_codec = System_Address_codec.getCodec();
 
   public synchronized static Third_Party_Info_Type_codec getCodec()
   {

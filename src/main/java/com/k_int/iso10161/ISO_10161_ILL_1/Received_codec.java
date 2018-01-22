@@ -12,15 +12,15 @@ public class Received_codec extends base_codec
   private static Log log = LogFactory.getLog(Received_codec.class);
   public static Received_codec me = null;
 
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
-  private Shipped_Service_Type_codec i_shipped_service_type_codec = Shipped_Service_Type_codec.getCodec();
-  private Supplemental_Item_Description_codec i_supplemental_item_description_codec = Supplemental_Item_Description_codec.getCodec();
-  private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
-  private received_extensions_inline10_codec i_received_extensions_inline10_codec = received_extensions_inline10_codec.getCodec();
-  private Transaction_Id_codec i_transaction_id_codec = Transaction_Id_codec.getCodec();
   private ISO_Date_codec i_iso_date_codec = ISO_Date_codec.getCodec();
-  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
+  private Shipped_Service_Type_codec i_shipped_service_type_codec = Shipped_Service_Type_codec.getCodec();
+  private received_extensions_inline10_codec i_received_extensions_inline10_codec = received_extensions_inline10_codec.getCodec();
+  private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
+  private Transaction_Id_codec i_transaction_id_codec = Transaction_Id_codec.getCodec();
   private Service_Date_Time_codec i_service_date_time_codec = Service_Date_Time_codec.getCodec();
+  private Supplemental_Item_Description_codec i_supplemental_item_description_codec = Supplemental_Item_Description_codec.getCodec();
+  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
 
   public synchronized static Received_codec getCodec()
   {

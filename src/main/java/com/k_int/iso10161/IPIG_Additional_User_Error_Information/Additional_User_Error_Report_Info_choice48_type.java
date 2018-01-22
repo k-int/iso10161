@@ -7,7 +7,7 @@ import com.k_int.codec.runtime.*;
 
 public class Additional_User_Error_Report_Info_choice48_type extends ChoiceType implements Serializable 
 {
-  private transient static LoggingContext log = LogFactory.getLog(Additional_User_Error_Report_Info_choice48_type.class);
+  private transient static Log log = LogFactory.getLog(Additional_User_Error_Report_Info_choice48_type.class);
   public transient static final int element_truncated_CID = 0;
   public transient static final int missing_required_element_CID = 1;
   public transient static final int unsupported_field_length_CID = 2;

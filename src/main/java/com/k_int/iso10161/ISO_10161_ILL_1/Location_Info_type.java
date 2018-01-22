@@ -33,9 +33,9 @@ public class Location_Info_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("location_id"=location_id);
-        sw.write("location_address"=location_address);
-        sw.write("location_note"=location_note);
+        sw.write("location_id="+location_id);
+        sw.write("location_address="+location_address);
+        sw.write("location_note="+location_note);
         sw.write("\n}\n");
         return sw.toString();
     }

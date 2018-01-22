@@ -7,7 +7,7 @@ import com.k_int.codec.runtime.*;
 
 public class ClientInfoType_type extends ChoiceType implements Serializable 
 {
-  private transient static LoggingContext log = LogFactory.getLog(ClientInfoType_type.class);
+  private transient static Log log = LogFactory.getLog(ClientInfoType_type.class);
   public transient static final int standard_CID = 0;
   public transient static final int local_CID = 1;
 

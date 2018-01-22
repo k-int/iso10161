@@ -33,9 +33,9 @@ public class Send_To_List_TypeItem34_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("system_id"=system_id);
-        sw.write("account_number"=account_number);
-        sw.write("system_address"=system_address);
+        sw.write("system_id="+system_id);
+        sw.write("account_number="+account_number);
+        sw.write("system_address="+system_address);
         sw.write("\n}\n");
         return sw.toString();
     }

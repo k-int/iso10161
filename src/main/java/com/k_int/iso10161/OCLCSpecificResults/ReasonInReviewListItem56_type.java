@@ -30,8 +30,8 @@ public class ReasonInReviewListItem56_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("reasonInReview"=reasonInReview);
-        sw.write("reasonInReviewText"=reasonInReviewText);
+        sw.write("reasonInReview="+reasonInReview);
+        sw.write("reasonInReviewText="+reasonInReviewText);
         sw.write("\n}\n");
         return sw.toString();
     }

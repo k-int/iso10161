@@ -30,8 +30,8 @@ public class deposit_account_inline54_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("account_name"=account_name);
-        sw.write("account_number"=account_number);
+        sw.write("account_name="+account_name);
+        sw.write("account_number="+account_number);
         sw.write("\n}\n");
         return sw.toString();
     }

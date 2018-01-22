@@ -38,10 +38,10 @@ public class bank_electronic_payment_inline55_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("bank_name"=bank_name);
-        sw.write("bank_address"=bank_address);
-        sw.write("routing_number"=routing_number);
-        sw.write("account_number"=account_number);
+        sw.write("bank_name="+bank_name);
+        sw.write("bank_address="+bank_address);
+        sw.write("routing_number="+routing_number);
+        sw.write("account_number="+account_number);
         sw.write("\n}\n");
         return sw.toString();
     }

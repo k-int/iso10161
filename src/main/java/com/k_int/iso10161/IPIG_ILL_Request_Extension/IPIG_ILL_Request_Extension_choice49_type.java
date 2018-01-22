@@ -7,7 +7,7 @@ import com.k_int.codec.runtime.*;
 
 public class IPIG_ILL_Request_Extension_choice49_type extends ChoiceType implements Serializable 
 {
-  private transient static LoggingContext log = LogFactory.getLog(IPIG_ILL_Request_Extension_choice49_type.class);
+  private transient static Log log = LogFactory.getLog(IPIG_ILL_Request_Extension_choice49_type.class);
   public transient static final int uniform_title_CID = 0;
   public transient static final int material_type_CID = 1;
   public transient static final int responder_specific_info_CID = 2;

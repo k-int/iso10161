@@ -12,8 +12,8 @@ public class Delivery_Address_codec extends base_codec
   private static Log log = LogFactory.getLog(Delivery_Address_codec.class);
   public static Delivery_Address_codec me = null;
 
-  private System_Address_codec i_system_address_codec = System_Address_codec.getCodec();
   private Postal_Address_codec i_postal_address_codec = Postal_Address_codec.getCodec();
+  private System_Address_codec i_system_address_codec = System_Address_codec.getCodec();
 
   public synchronized static Delivery_Address_codec getCodec()
   {

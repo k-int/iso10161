@@ -57,15 +57,15 @@ public class Supply_Details_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("date_shipped"=date_shipped);
-        sw.write("date_due"=date_due);
-        sw.write("chargeable_units"=chargeable_units);
-        sw.write("cost"=cost);
-        sw.write("shipped_conditions"=shipped_conditions);
-        sw.write("shipped_via"=shipped_via);
-        sw.write("insured_for"=insured_for);
-        sw.write("return_insurance_require"=return_insurance_require);
-        sw.write("no_of_units_per_medium"=no_of_units_per_medium);
+        sw.write("date_shipped="+date_shipped);
+        sw.write("date_due="+date_due);
+        sw.write("chargeable_units="+chargeable_units);
+        sw.write("cost="+cost);
+        sw.write("shipped_conditions="+shipped_conditions);
+        sw.write("shipped_via="+shipped_via);
+        sw.write("insured_for="+insured_for);
+        sw.write("return_insurance_require="+return_insurance_require);
+        sw.write("no_of_units_per_medium="+no_of_units_per_medium);
         sw.write("\n}\n");
         return sw.toString();
     }

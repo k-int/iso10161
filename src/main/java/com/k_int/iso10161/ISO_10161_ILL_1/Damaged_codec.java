@@ -12,13 +12,13 @@ public class Damaged_codec extends base_codec
   private static Log log = LogFactory.getLog(Damaged_codec.class);
   public static Damaged_codec me = null;
 
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
-  private damaged_extensions_inline18_codec i_damaged_extensions_inline18_codec = damaged_extensions_inline18_codec.getCodec();
   private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
-  private Damaged_Details_codec i_damaged_details_codec = Damaged_Details_codec.getCodec();
   private Transaction_Id_codec i_transaction_id_codec = Transaction_Id_codec.getCodec();
-  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
+  private damaged_extensions_inline18_codec i_damaged_extensions_inline18_codec = damaged_extensions_inline18_codec.getCodec();
   private Service_Date_Time_codec i_service_date_time_codec = Service_Date_Time_codec.getCodec();
+  private Damaged_Details_codec i_damaged_details_codec = Damaged_Details_codec.getCodec();
+  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
 
   public synchronized static Damaged_codec getCodec()
   {

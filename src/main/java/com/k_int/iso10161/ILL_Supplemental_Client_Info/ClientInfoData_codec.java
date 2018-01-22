@@ -22,8 +22,8 @@ public class ClientInfoData_codec extends base_codec
   private static Log log = LogFactory.getLog(ClientInfoData_codec.class);
   public static ClientInfoData_codec me = null;
 
-  private ClientInfoType_codec i_clientinfotype_codec = ClientInfoType_codec.getCodec();
   private infoContent_inline47_codec i_infocontent_inline47_codec = infoContent_inline47_codec.getCodec();
+  private ClientInfoType_codec i_clientinfotype_codec = ClientInfoType_codec.getCodec();
 
   public synchronized static ClientInfoData_codec getCodec()
   {

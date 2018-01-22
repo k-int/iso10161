@@ -12,12 +12,12 @@ public class Lost_codec extends base_codec
   private static Log log = LogFactory.getLog(Lost_codec.class);
   public static Lost_codec me = null;
 
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
+  private lost_extensions_inline17_codec i_lost_extensions_inline17_codec = lost_extensions_inline17_codec.getCodec();
   private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
   private Transaction_Id_codec i_transaction_id_codec = Transaction_Id_codec.getCodec();
-  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
-  private lost_extensions_inline17_codec i_lost_extensions_inline17_codec = lost_extensions_inline17_codec.getCodec();
   private Service_Date_Time_codec i_service_date_time_codec = Service_Date_Time_codec.getCodec();
+  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
 
   public synchronized static Lost_codec getCodec()
   {

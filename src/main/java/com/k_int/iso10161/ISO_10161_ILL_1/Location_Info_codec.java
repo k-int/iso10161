@@ -13,8 +13,8 @@ public class Location_Info_codec extends base_codec
   public static Location_Info_codec me = null;
 
   private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
-  private System_Address_codec i_system_address_codec = System_Address_codec.getCodec();
   private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
+  private System_Address_codec i_system_address_codec = System_Address_codec.getCodec();
 
   public synchronized static Location_Info_codec getCodec()
   {

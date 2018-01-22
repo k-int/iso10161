@@ -12,9 +12,9 @@ public class Retry_Results_codec extends base_codec
   private static Log log = LogFactory.getLog(Retry_Results_codec.class);
   public static Retry_Results_codec me = null;
 
-  private locations_inline33_codec i_locations_inline33_codec = locations_inline33_codec.getCodec();
   private ISO_Date_codec i_iso_date_codec = ISO_Date_codec.getCodec();
   private Enumerated_codec i_enumerated_codec = Enumerated_codec.getCodec();
+  private locations_inline33_codec i_locations_inline33_codec = locations_inline33_codec.getCodec();
 
   public synchronized static Retry_Results_codec getCodec()
   {

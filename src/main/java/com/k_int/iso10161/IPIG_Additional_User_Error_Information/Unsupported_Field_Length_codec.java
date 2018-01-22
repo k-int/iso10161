@@ -14,8 +14,8 @@ public class Unsupported_Field_Length_codec extends base_codec
   private static Log log = LogFactory.getLog(Unsupported_Field_Length_codec.class);
   public static Unsupported_Field_Length_codec me = null;
 
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
   private Identifier_codec i_identifier_codec = Identifier_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
 
   public synchronized static Unsupported_Field_Length_codec getCodec()
   {

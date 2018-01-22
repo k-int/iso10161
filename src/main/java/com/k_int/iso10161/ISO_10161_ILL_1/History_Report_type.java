@@ -69,18 +69,18 @@ public class History_Report_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("date_requested"=date_requested);
-        sw.write("author"=author);
-        sw.write("title"=title);
-        sw.write("author_of_article"=author_of_article);
-        sw.write("title_of_article"=title_of_article);
-        sw.write("date_of_last_transition"=date_of_last_transition);
-        sw.write("most_recent_service"=most_recent_service);
-        sw.write("date_of_most_recent_service"=date_of_most_recent_service);
-        sw.write("initiator_of_most_recent_service"=initiator_of_most_recent_service);
-        sw.write("shipped_service_type"=shipped_service_type);
-        sw.write("transaction_results"=transaction_results);
-        sw.write("most_recent_service_note"=most_recent_service_note);
+        sw.write("date_requested="+date_requested);
+        sw.write("author="+author);
+        sw.write("title="+title);
+        sw.write("author_of_article="+author_of_article);
+        sw.write("title_of_article="+title_of_article);
+        sw.write("date_of_last_transition="+date_of_last_transition);
+        sw.write("most_recent_service="+most_recent_service);
+        sw.write("date_of_most_recent_service="+date_of_most_recent_service);
+        sw.write("initiator_of_most_recent_service="+initiator_of_most_recent_service);
+        sw.write("shipped_service_type="+shipped_service_type);
+        sw.write("transaction_results="+transaction_results);
+        sw.write("most_recent_service_note="+most_recent_service_note);
         sw.write("\n}\n");
         return sw.toString();
     }

@@ -30,8 +30,8 @@ public class Suppliers_Reference_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("supplier_authority"=supplier_authority);
-        sw.write("supplier_reference"=supplier_reference);
+        sw.write("supplier_authority="+supplier_authority);
+        sw.write("supplier_reference="+supplier_reference);
         sw.write("\n}\n");
         return sw.toString();
     }

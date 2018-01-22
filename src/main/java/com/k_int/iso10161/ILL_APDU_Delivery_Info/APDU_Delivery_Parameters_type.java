@@ -35,9 +35,9 @@ public class APDU_Delivery_Parameters_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("encoding"=encoding);
-        sw.write("transport"=transport);
-        sw.write("aliases"=aliases);
+        sw.write("encoding="+encoding);
+        sw.write("transport="+transport);
+        sw.write("aliases="+aliases);
         sw.write("\n}\n");
         return sw.toString();
     }

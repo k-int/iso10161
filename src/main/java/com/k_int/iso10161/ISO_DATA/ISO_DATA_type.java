@@ -42,10 +42,10 @@ public class ISO_DATA_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("flags"=flags);
-        sw.write("requester"=requester);
-        sw.write("responder"=responder);
-        sw.write("ppartner"=ppartner);
+        sw.write("flags="+flags);
+        sw.write("requester="+requester);
+        sw.write("responder="+responder);
+        sw.write("ppartner="+ppartner);
         sw.write("\n}\n");
         return sw.toString();
     }

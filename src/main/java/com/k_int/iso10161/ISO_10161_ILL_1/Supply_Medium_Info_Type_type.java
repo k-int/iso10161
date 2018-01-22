@@ -29,8 +29,8 @@ public class Supply_Medium_Info_Type_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("supply_medium_type"=supply_medium_type);
-        sw.write("medium_characteristics"=medium_characteristics);
+        sw.write("supply_medium_type="+supply_medium_type);
+        sw.write("medium_characteristics="+medium_characteristics);
         sw.write("\n}\n");
         return sw.toString();
     }

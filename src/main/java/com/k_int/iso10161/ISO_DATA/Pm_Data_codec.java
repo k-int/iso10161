@@ -22,14 +22,14 @@ public class Pm_Data_codec extends base_codec
   private static Log log = LogFactory.getLog(Pm_Data_codec.class);
   public static Pm_Data_codec me = null;
 
+  private GeneralString_codec i_generalstring_codec = GeneralString_codec.getCodec();
+  private history_list_inline60_codec i_history_list_inline60_codec = history_list_inline60_codec.getCodec();
+  private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
+  private APDU_Delivery_Info_codec i_apdu_delivery_info_codec = APDU_Delivery_Info_codec.getCodec();
+  private Transaction_Id_codec i_transaction_id_codec = Transaction_Id_codec.getCodec();
   private OctetString_codec i_octetstring_codec = OctetString_codec.getCodec();
   private Requester_Optional_Messages_Type_codec i_requester_optional_messages_type_codec = Requester_Optional_Messages_Type_codec.getCodec();
-  private GeneralString_codec i_generalstring_codec = GeneralString_codec.getCodec();
-  private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
-  private Transaction_Id_codec i_transaction_id_codec = Transaction_Id_codec.getCodec();
-  private history_list_inline60_codec i_history_list_inline60_codec = history_list_inline60_codec.getCodec();
   private Responder_Optional_Messages_Type_codec i_responder_optional_messages_type_codec = Responder_Optional_Messages_Type_codec.getCodec();
-  private APDU_Delivery_Info_codec i_apdu_delivery_info_codec = APDU_Delivery_Info_codec.getCodec();
 
   public synchronized static Pm_Data_codec getCodec()
   {

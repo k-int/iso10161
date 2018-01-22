@@ -37,10 +37,10 @@ public class Conditional_Results_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("conditions"=conditions);
-        sw.write("date_for_reply"=date_for_reply);
-        sw.write("locations"=locations);
-        sw.write("proposed_delivery_service"=proposed_delivery_service);
+        sw.write("conditions="+conditions);
+        sw.write("date_for_reply="+date_for_reply);
+        sw.write("locations="+locations);
+        sw.write("proposed_delivery_service="+proposed_delivery_service);
         sw.write("\n}\n");
         return sw.toString();
     }

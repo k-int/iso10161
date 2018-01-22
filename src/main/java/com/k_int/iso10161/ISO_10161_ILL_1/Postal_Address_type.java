@@ -53,14 +53,14 @@ public class Postal_Address_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("name_of_person_or_institution"=name_of_person_or_institution);
-        sw.write("extended_postal_delivery_address"=extended_postal_delivery_address);
-        sw.write("street_and_number"=street_and_number);
-        sw.write("post_office_box"=post_office_box);
-        sw.write("city"=city);
-        sw.write("region"=region);
-        sw.write("country"=country);
-        sw.write("postal_code"=postal_code);
+        sw.write("name_of_person_or_institution="+name_of_person_or_institution);
+        sw.write("extended_postal_delivery_address="+extended_postal_delivery_address);
+        sw.write("street_and_number="+street_and_number);
+        sw.write("post_office_box="+post_office_box);
+        sw.write("city="+city);
+        sw.write("region="+region);
+        sw.write("country="+country);
+        sw.write("postal_code="+postal_code);
         sw.write("\n}\n");
         return sw.toString();
     }

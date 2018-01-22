@@ -12,8 +12,8 @@ public class Search_Type_codec extends base_codec
   private static Log log = LogFactory.getLog(Search_Type_codec.class);
   public static Search_Type_codec me = null;
 
-  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
   private ISO_Date_codec i_iso_date_codec = ISO_Date_codec.getCodec();
+  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
   private Enumerated_codec i_enumerated_codec = Enumerated_codec.getCodec();
 
   public synchronized static Search_Type_codec getCodec()

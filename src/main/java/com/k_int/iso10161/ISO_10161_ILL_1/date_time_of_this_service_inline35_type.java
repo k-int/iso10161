@@ -29,8 +29,8 @@ public class date_time_of_this_service_inline35_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("date"=date);
-        sw.write("time"=time);
+        sw.write("date="+date);
+        sw.write("time="+time);
         sw.write("\n}\n");
         return sw.toString();
     }

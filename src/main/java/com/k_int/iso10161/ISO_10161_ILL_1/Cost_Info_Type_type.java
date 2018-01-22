@@ -41,11 +41,11 @@ public class Cost_Info_Type_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("account_number"=account_number);
-        sw.write("maximum_cost"=maximum_cost);
-        sw.write("reciprocal_agreement"=reciprocal_agreement);
-        sw.write("will_pay_fee"=will_pay_fee);
-        sw.write("payment_provided"=payment_provided);
+        sw.write("account_number="+account_number);
+        sw.write("maximum_cost="+maximum_cost);
+        sw.write("reciprocal_agreement="+reciprocal_agreement);
+        sw.write("will_pay_fee="+will_pay_fee);
+        sw.write("payment_provided="+payment_provided);
         sw.write("\n}\n");
         return sw.toString();
     }

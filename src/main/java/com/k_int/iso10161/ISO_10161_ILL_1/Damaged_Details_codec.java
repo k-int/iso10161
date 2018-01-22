@@ -12,8 +12,8 @@ public class Damaged_Details_codec extends base_codec
   private static Log log = LogFactory.getLog(Damaged_Details_codec.class);
   public static Damaged_Details_codec me = null;
 
-  private damaged_portion_inline24_codec i_damaged_portion_inline24_codec = damaged_portion_inline24_codec.getCodec();
   private OID_codec i_oid_codec = OID_codec.getCodec();
+  private damaged_portion_inline24_codec i_damaged_portion_inline24_codec = damaged_portion_inline24_codec.getCodec();
 
   public synchronized static Damaged_Details_codec getCodec()
   {

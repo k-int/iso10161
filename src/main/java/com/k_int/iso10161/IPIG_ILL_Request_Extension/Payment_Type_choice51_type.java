@@ -7,7 +7,7 @@ import com.k_int.codec.runtime.*;
 
 public class Payment_Type_choice51_type extends ChoiceType implements Serializable 
 {
-  private transient static LoggingContext log = LogFactory.getLog(Payment_Type_choice51_type.class);
+  private transient static Log log = LogFactory.getLog(Payment_Type_choice51_type.class);
   public transient static final int reciprocal_agreement_CID = 0;
   public transient static final int prepaid_CID = 1;
   public transient static final int unesco_voucher_CID = 2;

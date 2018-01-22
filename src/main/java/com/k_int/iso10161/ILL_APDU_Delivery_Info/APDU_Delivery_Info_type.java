@@ -35,9 +35,9 @@ public class APDU_Delivery_Info_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("sender_info"=sender_info);
-        sw.write("recipient_info"=recipient_info);
-        sw.write("transponder_info"=transponder_info);
+        sw.write("sender_info="+sender_info);
+        sw.write("recipient_info="+recipient_info);
+        sw.write("transponder_info="+transponder_info);
         sw.write("\n}\n");
         return sw.toString();
     }

@@ -12,8 +12,8 @@ public class date_time_of_this_service_inline35_codec extends base_codec
   private static Log log = LogFactory.getLog(date_time_of_this_service_inline35_codec.class);
   public static date_time_of_this_service_inline35_codec me = null;
 
-  private ISO_Time_codec i_iso_time_codec = ISO_Time_codec.getCodec();
   private ISO_Date_codec i_iso_date_codec = ISO_Date_codec.getCodec();
+  private ISO_Time_codec i_iso_time_codec = ISO_Time_codec.getCodec();
 
   public synchronized static date_time_of_this_service_inline35_codec getCodec()
   {

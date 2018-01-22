@@ -7,7 +7,7 @@ import com.k_int.codec.runtime.*;
 
 public class type_inline50_type extends ChoiceType implements Serializable 
 {
-  private transient static LoggingContext log = LogFactory.getLog(type_inline50_type.class);
+  private transient static Log log = LogFactory.getLog(type_inline50_type.class);
   public transient static final int phd_dissertation_CID = 0;
   public transient static final int masters_thesis_CID = 1;
   public transient static final int undergraduate_honors_thesis_CID = 2;

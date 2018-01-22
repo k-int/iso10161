@@ -7,7 +7,7 @@ import com.k_int.codec.runtime.*;
 
 public class ILL_APDU_type extends ChoiceType implements Serializable 
 {
-  private transient static LoggingContext log = LogFactory.getLog(ILL_APDU_type.class);
+  private transient static Log log = LogFactory.getLog(ILL_APDU_type.class);
   public transient static final int ill_request_var_CID = 0;
   public transient static final int forward_notification_var_CID = 1;
   public transient static final int shipped_var_CID = 2;

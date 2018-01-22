@@ -14,8 +14,8 @@ public class Item_Id_codec extends base_codec
 
   private Medium_Type_codec i_medium_type_codec = Medium_Type_codec.getCodec();
   private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
-  private EXTERNAL_codec i_external_codec = EXTERNAL_codec.getCodec();
   private Enumerated_codec i_enumerated_codec = Enumerated_codec.getCodec();
+  private EXTERNAL_codec i_external_codec = EXTERNAL_codec.getCodec();
 
   public synchronized static Item_Id_codec getCodec()
   {

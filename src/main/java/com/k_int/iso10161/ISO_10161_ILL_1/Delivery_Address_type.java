@@ -29,8 +29,8 @@ public class Delivery_Address_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("postal_address"=postal_address);
-        sw.write("electronic_address"=electronic_address);
+        sw.write("postal_address="+postal_address);
+        sw.write("electronic_address="+electronic_address);
         sw.write("\n}\n");
         return sw.toString();
     }

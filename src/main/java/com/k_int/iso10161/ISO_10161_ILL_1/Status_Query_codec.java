@@ -12,12 +12,12 @@ public class Status_Query_codec extends base_codec
   private static Log log = LogFactory.getLog(Status_Query_codec.class);
   public static Status_Query_codec me = null;
 
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
-  private status_query_extensions_inline20_codec i_status_query_extensions_inline20_codec = status_query_extensions_inline20_codec.getCodec();
   private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
+  private status_query_extensions_inline20_codec i_status_query_extensions_inline20_codec = status_query_extensions_inline20_codec.getCodec();
   private Transaction_Id_codec i_transaction_id_codec = Transaction_Id_codec.getCodec();
-  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
   private Service_Date_Time_codec i_service_date_time_codec = Service_Date_Time_codec.getCodec();
+  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
 
   public synchronized static Status_Query_codec getCodec()
   {

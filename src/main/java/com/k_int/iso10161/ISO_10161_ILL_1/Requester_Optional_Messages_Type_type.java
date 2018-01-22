@@ -37,10 +37,10 @@ public class Requester_Optional_Messages_Type_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("can_send_RECEIVED"=can_send_RECEIVED);
-        sw.write("can_send_RETURNED"=can_send_RETURNED);
-        sw.write("requester_SHIPPED"=requester_SHIPPED);
-        sw.write("requester_CHECKED_IN"=requester_CHECKED_IN);
+        sw.write("can_send_RECEIVED="+can_send_RECEIVED);
+        sw.write("can_send_RETURNED="+can_send_RETURNED);
+        sw.write("requester_SHIPPED="+requester_SHIPPED);
+        sw.write("requester_CHECKED_IN="+requester_CHECKED_IN);
         sw.write("\n}\n");
         return sw.toString();
     }

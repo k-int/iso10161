@@ -42,9 +42,9 @@ public class Intermediary_Responder_Control_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("transactionResults"=transactionResults);
-        sw.write("resultsExplanation"=resultsExplanation);
-        sw.write("responderId"=responderId);
+        sw.write("transactionResults="+transactionResults);
+        sw.write("resultsExplanation="+resultsExplanation);
+        sw.write("responderId="+responderId);
         sw.write("\n}\n");
         return sw.toString();
     }

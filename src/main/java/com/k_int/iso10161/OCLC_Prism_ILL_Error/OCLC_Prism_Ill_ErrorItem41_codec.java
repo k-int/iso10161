@@ -14,9 +14,9 @@ public class OCLC_Prism_Ill_ErrorItem41_codec extends base_codec
   private static Log log = LogFactory.getLog(OCLC_Prism_Ill_ErrorItem41_codec.class);
   public static OCLC_Prism_Ill_ErrorItem41_codec me = null;
 
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
   private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
   private Enumerated_codec i_enumerated_codec = Enumerated_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
 
   public synchronized static OCLC_Prism_Ill_ErrorItem41_codec getCodec()
   {

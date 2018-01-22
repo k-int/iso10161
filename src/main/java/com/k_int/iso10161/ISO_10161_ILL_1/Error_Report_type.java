@@ -37,10 +37,10 @@ public class Error_Report_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("correlation_information"=correlation_information);
-        sw.write("report_source"=report_source);
-        sw.write("user_error_report"=user_error_report);
-        sw.write("provider_error_report"=provider_error_report);
+        sw.write("correlation_information="+correlation_information);
+        sw.write("report_source="+report_source);
+        sw.write("user_error_report="+user_error_report);
+        sw.write("provider_error_report="+provider_error_report);
         sw.write("\n}\n");
         return sw.toString();
     }

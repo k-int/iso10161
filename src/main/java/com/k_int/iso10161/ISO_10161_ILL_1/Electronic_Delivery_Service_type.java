@@ -45,12 +45,12 @@ public class Electronic_Delivery_Service_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("e_delivery_service"=e_delivery_service);
-        sw.write("document_type"=document_type);
-        sw.write("e_delivery_description"=e_delivery_description);
-        sw.write("e_delivery_details"=e_delivery_details);
-        sw.write("name_or_code"=name_or_code);
-        sw.write("delivery_time"=delivery_time);
+        sw.write("e_delivery_service="+e_delivery_service);
+        sw.write("document_type="+document_type);
+        sw.write("e_delivery_description="+e_delivery_description);
+        sw.write("e_delivery_details="+e_delivery_details);
+        sw.write("name_or_code="+name_or_code);
+        sw.write("delivery_time="+delivery_time);
         sw.write("\n}\n");
         return sw.toString();
     }

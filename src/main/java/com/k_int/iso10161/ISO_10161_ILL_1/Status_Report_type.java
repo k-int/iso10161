@@ -29,8 +29,8 @@ public class Status_Report_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("user_status_report"=user_status_report);
-        sw.write("provider_status_report"=provider_status_report);
+        sw.write("user_status_report="+user_status_report);
+        sw.write("provider_status_report="+provider_status_report);
         sw.write("\n}\n");
         return sw.toString();
     }

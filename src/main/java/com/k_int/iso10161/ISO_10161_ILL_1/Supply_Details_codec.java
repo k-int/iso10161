@@ -12,13 +12,13 @@ public class Supply_Details_codec extends base_codec
   private static Log log = LogFactory.getLog(Supply_Details_codec.class);
   public static Supply_Details_codec me = null;
 
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
-  private Date_Due_codec i_date_due_codec = Date_Due_codec.getCodec();
-  private shipped_via_inline37_codec i_shipped_via_inline37_codec = shipped_via_inline37_codec.getCodec();
-  private no_of_units_per_medium_inline38_codec i_no_of_units_per_medium_inline38_codec = no_of_units_per_medium_inline38_codec.getCodec();
   private ISO_Date_codec i_iso_date_codec = ISO_Date_codec.getCodec();
   private Amount_codec i_amount_codec = Amount_codec.getCodec();
+  private shipped_via_inline37_codec i_shipped_via_inline37_codec = shipped_via_inline37_codec.getCodec();
+  private Date_Due_codec i_date_due_codec = Date_Due_codec.getCodec();
+  private no_of_units_per_medium_inline38_codec i_no_of_units_per_medium_inline38_codec = no_of_units_per_medium_inline38_codec.getCodec();
   private Enumerated_codec i_enumerated_codec = Enumerated_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
 
   public synchronized static Supply_Details_codec getCodec()
   {

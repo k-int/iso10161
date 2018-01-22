@@ -30,8 +30,8 @@ public class Dissertation_Thesis_Details_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("granting_institution"=granting_institution);
-        sw.write("date_granted"=date_granted);
+        sw.write("granting_institution="+granting_institution);
+        sw.write("date_granted="+date_granted);
         sw.write("\n}\n");
         return sw.toString();
     }

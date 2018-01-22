@@ -65,17 +65,17 @@ public class Received_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("protocol_version_num"=protocol_version_num);
-        sw.write("transaction_id"=transaction_id);
-        sw.write("service_date_time"=service_date_time);
-        sw.write("requester_id"=requester_id);
-        sw.write("responder_id"=responder_id);
-        sw.write("supplier_id"=supplier_id);
-        sw.write("supplemental_item_description"=supplemental_item_description);
-        sw.write("date_received"=date_received);
-        sw.write("shipped_service_type"=shipped_service_type);
-        sw.write("requester_note"=requester_note);
-        sw.write("received_extensions"=received_extensions);
+        sw.write("protocol_version_num="+protocol_version_num);
+        sw.write("transaction_id="+transaction_id);
+        sw.write("service_date_time="+service_date_time);
+        sw.write("requester_id="+requester_id);
+        sw.write("responder_id="+responder_id);
+        sw.write("supplier_id="+supplier_id);
+        sw.write("supplemental_item_description="+supplemental_item_description);
+        sw.write("date_received="+date_received);
+        sw.write("shipped_service_type="+shipped_service_type);
+        sw.write("requester_note="+requester_note);
+        sw.write("received_extensions="+received_extensions);
         sw.write("\n}\n");
         return sw.toString();
     }

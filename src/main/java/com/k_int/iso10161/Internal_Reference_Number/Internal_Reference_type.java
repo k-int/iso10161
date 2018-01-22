@@ -30,8 +30,8 @@ public class Internal_Reference_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("requester_reference"=requester_reference);
-        sw.write("responder_reference"=responder_reference);
+        sw.write("requester_reference="+requester_reference);
+        sw.write("responder_reference="+responder_reference);
         sw.write("\n}\n");
         return sw.toString();
     }

@@ -29,8 +29,8 @@ public class Locations_Results_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("reason_locs_provided"=reason_locs_provided);
-        sw.write("locations"=locations);
+        sw.write("reason_locs_provided="+reason_locs_provided);
+        sw.write("locations="+locations);
         sw.write("\n}\n");
         return sw.toString();
     }

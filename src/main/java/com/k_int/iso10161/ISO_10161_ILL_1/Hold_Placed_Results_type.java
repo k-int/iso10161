@@ -33,9 +33,9 @@ public class Hold_Placed_Results_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("estimated_date_available"=estimated_date_available);
-        sw.write("hold_placed_medium_type"=hold_placed_medium_type);
-        sw.write("locations"=locations);
+        sw.write("estimated_date_available="+estimated_date_available);
+        sw.write("hold_placed_medium_type="+hold_placed_medium_type);
+        sw.write("locations="+locations);
         sw.write("\n}\n");
         return sw.toString();
     }

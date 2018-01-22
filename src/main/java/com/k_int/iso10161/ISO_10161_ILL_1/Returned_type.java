@@ -65,17 +65,17 @@ public class Returned_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("protocol_version_num"=protocol_version_num);
-        sw.write("transaction_id"=transaction_id);
-        sw.write("service_date_time"=service_date_time);
-        sw.write("requester_id"=requester_id);
-        sw.write("responder_id"=responder_id);
-        sw.write("supplemental_item_description"=supplemental_item_description);
-        sw.write("date_returned"=date_returned);
-        sw.write("returned_via"=returned_via);
-        sw.write("insured_for"=insured_for);
-        sw.write("requester_note"=requester_note);
-        sw.write("returned_extensions"=returned_extensions);
+        sw.write("protocol_version_num="+protocol_version_num);
+        sw.write("transaction_id="+transaction_id);
+        sw.write("service_date_time="+service_date_time);
+        sw.write("requester_id="+requester_id);
+        sw.write("responder_id="+responder_id);
+        sw.write("supplemental_item_description="+supplemental_item_description);
+        sw.write("date_returned="+date_returned);
+        sw.write("returned_via="+returned_via);
+        sw.write("insured_for="+insured_for);
+        sw.write("requester_note="+requester_note);
+        sw.write("returned_extensions="+returned_extensions);
         sw.write("\n}\n");
         return sw.toString();
     }

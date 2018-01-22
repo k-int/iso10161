@@ -12,9 +12,9 @@ public class Extension_codec extends base_codec
   private static Log log = LogFactory.getLog(Extension_codec.class);
   public static Extension_codec me = null;
 
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
-  private BOOL_codec i_bool_codec = BOOL_codec.getCodec();
   private Any_codec i_any_codec = Any_codec.getCodec();
+  private BOOL_codec i_bool_codec = BOOL_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
 
   public synchronized static Extension_codec getCodec()
   {

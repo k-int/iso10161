@@ -29,8 +29,8 @@ public class e_delivery_service_inline27_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("e_delivery_mode"=e_delivery_mode);
-        sw.write("e_delivery_parameters"=e_delivery_parameters);
+        sw.write("e_delivery_mode="+e_delivery_mode);
+        sw.write("e_delivery_parameters="+e_delivery_parameters);
         sw.write("\n}\n");
         return sw.toString();
     }

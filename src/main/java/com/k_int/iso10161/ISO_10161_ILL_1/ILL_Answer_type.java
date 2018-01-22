@@ -77,20 +77,20 @@ public class ILL_Answer_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("protocol_version_num"=protocol_version_num);
-        sw.write("transaction_id"=transaction_id);
-        sw.write("service_date_time"=service_date_time);
-        sw.write("requester_id"=requester_id);
-        sw.write("responder_id"=responder_id);
-        sw.write("transaction_results"=transaction_results);
-        sw.write("results_explanation"=results_explanation);
-        sw.write("responder_specific_results"=responder_specific_results);
-        sw.write("supplemental_item_description"=supplemental_item_description);
-        sw.write("send_to_list"=send_to_list);
-        sw.write("already_tried_list"=already_tried_list);
-        sw.write("responder_optional_messages"=responder_optional_messages);
-        sw.write("responder_note"=responder_note);
-        sw.write("ill_answer_extensions"=ill_answer_extensions);
+        sw.write("protocol_version_num="+protocol_version_num);
+        sw.write("transaction_id="+transaction_id);
+        sw.write("service_date_time="+service_date_time);
+        sw.write("requester_id="+requester_id);
+        sw.write("responder_id="+responder_id);
+        sw.write("transaction_results="+transaction_results);
+        sw.write("results_explanation="+results_explanation);
+        sw.write("responder_specific_results="+responder_specific_results);
+        sw.write("supplemental_item_description="+supplemental_item_description);
+        sw.write("send_to_list="+send_to_list);
+        sw.write("already_tried_list="+already_tried_list);
+        sw.write("responder_optional_messages="+responder_optional_messages);
+        sw.write("responder_note="+responder_note);
+        sw.write("ill_answer_extensions="+ill_answer_extensions);
         sw.write("\n}\n");
         return sw.toString();
     }

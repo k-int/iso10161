@@ -70,17 +70,17 @@ public class Pm_Data_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("transactionId"=transactionId);
-        sw.write("iso_id"=iso_id);
-        sw.write("delivery_info"=delivery_info);
-        sw.write("variables"=variables);
-        sw.write("requester_optional_msgs"=requester_optional_msgs);
-        sw.write("responder_optional_msgs"=responder_optional_msgs);
-        sw.write("current_partner"=current_partner);
-        sw.write("alias"=alias);
-        sw.write("initiator_of_mrs"=initiator_of_mrs);
-        sw.write("mrServiceNote"=mrServiceNote);
-        sw.write("history_list"=history_list);
+        sw.write("transactionId="+transactionId);
+        sw.write("iso_id="+iso_id);
+        sw.write("delivery_info="+delivery_info);
+        sw.write("variables="+variables);
+        sw.write("requester_optional_msgs="+requester_optional_msgs);
+        sw.write("responder_optional_msgs="+responder_optional_msgs);
+        sw.write("current_partner="+current_partner);
+        sw.write("alias="+alias);
+        sw.write("initiator_of_mrs="+initiator_of_mrs);
+        sw.write("mrServiceNote="+mrServiceNote);
+        sw.write("history_list="+history_list);
         sw.write("\n}\n");
         return sw.toString();
     }

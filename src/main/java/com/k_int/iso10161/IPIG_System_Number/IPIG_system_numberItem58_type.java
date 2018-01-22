@@ -35,9 +35,9 @@ public class IPIG_system_numberItem58_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("type"=type);
-        sw.write("database_ID"=database_ID);
-        sw.write("number"=number);
+        sw.write("type="+type);
+        sw.write("database_ID="+database_ID);
+        sw.write("number="+number);
         sw.write("\n}\n");
         return sw.toString();
     }

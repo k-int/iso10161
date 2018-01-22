@@ -29,8 +29,8 @@ public class Estimate_Results_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("cost_estimate"=cost_estimate);
-        sw.write("locations"=locations);
+        sw.write("cost_estimate="+cost_estimate);
+        sw.write("locations="+locations);
         sw.write("\n}\n");
         return sw.toString();
     }

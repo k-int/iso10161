@@ -30,8 +30,8 @@ public class OCLCSpecificResults_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("oclcSpecificStatus"=oclcSpecificStatus);
-        sw.write("reasonInReviewList"=reasonInReviewList);
+        sw.write("oclcSpecificStatus="+oclcSpecificStatus);
+        sw.write("reasonInReviewList="+reasonInReviewList);
         sw.write("\n}\n");
         return sw.toString();
     }

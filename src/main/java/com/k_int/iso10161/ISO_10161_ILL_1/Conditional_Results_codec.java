@@ -12,9 +12,9 @@ public class Conditional_Results_codec extends base_codec
   private static Log log = LogFactory.getLog(Conditional_Results_codec.class);
   public static Conditional_Results_codec me = null;
 
-  private Delivery_Service_codec i_delivery_service_codec = Delivery_Service_codec.getCodec();
-  private locations_inline23_codec i_locations_inline23_codec = locations_inline23_codec.getCodec();
   private ISO_Date_codec i_iso_date_codec = ISO_Date_codec.getCodec();
+  private locations_inline23_codec i_locations_inline23_codec = locations_inline23_codec.getCodec();
+  private Delivery_Service_codec i_delivery_service_codec = Delivery_Service_codec.getCodec();
   private Enumerated_codec i_enumerated_codec = Enumerated_codec.getCodec();
 
   public synchronized static Conditional_Results_codec getCodec()

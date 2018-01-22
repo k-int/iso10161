@@ -33,9 +33,9 @@ public class Client_Id_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("client_name"=client_name);
-        sw.write("client_status"=client_status);
-        sw.write("client_identifier"=client_identifier);
+        sw.write("client_name="+client_name);
+        sw.write("client_status="+client_status);
+        sw.write("client_identifier="+client_identifier);
         sw.write("\n}\n");
         return sw.toString();
     }

@@ -37,10 +37,10 @@ public class Responder_Optional_Messages_Type_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("can_send_SHIPPED"=can_send_SHIPPED);
-        sw.write("can_send_CHECKED_IN"=can_send_CHECKED_IN);
-        sw.write("responder_RECEIVED"=responder_RECEIVED);
-        sw.write("responder_RETURNED"=responder_RETURNED);
+        sw.write("can_send_SHIPPED="+can_send_SHIPPED);
+        sw.write("can_send_CHECKED_IN="+can_send_CHECKED_IN);
+        sw.write("responder_RECEIVED="+responder_RECEIVED);
+        sw.write("responder_RETURNED="+responder_RETURNED);
         sw.write("\n}\n");
         return sw.toString();
     }

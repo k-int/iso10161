@@ -41,11 +41,11 @@ public class Will_Supply_Results_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("reason_will_supply"=reason_will_supply);
-        sw.write("supply_date"=supply_date);
-        sw.write("return_to_address"=return_to_address);
-        sw.write("locations"=locations);
-        sw.write("electronic_delivery_service"=electronic_delivery_service);
+        sw.write("reason_will_supply="+reason_will_supply);
+        sw.write("supply_date="+supply_date);
+        sw.write("return_to_address="+return_to_address);
+        sw.write("locations="+locations);
+        sw.write("electronic_delivery_service="+electronic_delivery_service);
         sw.write("\n}\n");
         return sw.toString();
     }

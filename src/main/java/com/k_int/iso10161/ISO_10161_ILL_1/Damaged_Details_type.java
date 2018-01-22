@@ -29,8 +29,8 @@ public class Damaged_Details_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("document_type_id"=document_type_id);
-        sw.write("damaged_portion"=damaged_portion);
+        sw.write("document_type_id="+document_type_id);
+        sw.write("damaged_portion="+damaged_portion);
         sw.write("\n}\n");
         return sw.toString();
     }

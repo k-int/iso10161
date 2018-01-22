@@ -12,9 +12,9 @@ public class Hold_Placed_Results_codec extends base_codec
   private static Log log = LogFactory.getLog(Hold_Placed_Results_codec.class);
   public static Hold_Placed_Results_codec me = null;
 
+  private ISO_Date_codec i_iso_date_codec = ISO_Date_codec.getCodec();
   private Medium_Type_codec i_medium_type_codec = Medium_Type_codec.getCodec();
   private locations_inline31_codec i_locations_inline31_codec = locations_inline31_codec.getCodec();
-  private ISO_Date_codec i_iso_date_codec = ISO_Date_codec.getCodec();
 
   public synchronized static Hold_Placed_Results_codec getCodec()
   {

@@ -29,8 +29,8 @@ public class System_Id_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("person_or_institution_symbol"=person_or_institution_symbol);
-        sw.write("name_of_person_or_institution"=name_of_person_or_institution);
+        sw.write("person_or_institution_symbol="+person_or_institution_symbol);
+        sw.write("name_of_person_or_institution="+name_of_person_or_institution);
         sw.write("\n}\n");
         return sw.toString();
     }

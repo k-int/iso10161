@@ -29,8 +29,8 @@ public class Date_Due_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("date_due_field"=date_due_field);
-        sw.write("renewable"=renewable);
+        sw.write("date_due_field="+date_due_field);
+        sw.write("renewable="+renewable);
         sw.write("\n}\n");
         return sw.toString();
     }

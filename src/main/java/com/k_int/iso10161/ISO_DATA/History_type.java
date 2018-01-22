@@ -42,10 +42,10 @@ public class History_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("service_type"=service_type);
-        sw.write("datetime"=datetime);
-        sw.write("initiator"=initiator);
-        sw.write("note"=note);
+        sw.write("service_type="+service_type);
+        sw.write("datetime="+datetime);
+        sw.write("initiator="+initiator);
+        sw.write("note="+note);
         sw.write("\n}\n");
         return sw.toString();
     }

@@ -12,8 +12,8 @@ public class Status_Report_codec extends base_codec
   private static Log log = LogFactory.getLog(Status_Report_codec.class);
   public static Status_Report_codec me = null;
 
-  private History_Report_codec i_history_report_codec = History_Report_codec.getCodec();
   private Current_State_codec i_current_state_codec = Current_State_codec.getCodec();
+  private History_Report_codec i_history_report_codec = History_Report_codec.getCodec();
 
   public synchronized static Status_Report_codec getCodec()
   {

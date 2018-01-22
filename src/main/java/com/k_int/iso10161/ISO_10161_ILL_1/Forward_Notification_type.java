@@ -57,15 +57,15 @@ public class Forward_Notification_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("protocol_version_num"=protocol_version_num);
-        sw.write("transaction_id"=transaction_id);
-        sw.write("service_date_time"=service_date_time);
-        sw.write("requester_id"=requester_id);
-        sw.write("responder_id"=responder_id);
-        sw.write("responder_address"=responder_address);
-        sw.write("intermediary_id"=intermediary_id);
-        sw.write("notification_note"=notification_note);
-        sw.write("forward_notification_extensions"=forward_notification_extensions);
+        sw.write("protocol_version_num="+protocol_version_num);
+        sw.write("transaction_id="+transaction_id);
+        sw.write("service_date_time="+service_date_time);
+        sw.write("requester_id="+requester_id);
+        sw.write("responder_id="+responder_id);
+        sw.write("responder_address="+responder_address);
+        sw.write("intermediary_id="+intermediary_id);
+        sw.write("notification_note="+notification_note);
+        sw.write("forward_notification_extensions="+forward_notification_extensions);
         sw.write("\n}\n");
         return sw.toString();
     }

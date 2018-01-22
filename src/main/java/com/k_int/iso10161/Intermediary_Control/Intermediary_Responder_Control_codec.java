@@ -30,9 +30,9 @@ public class Intermediary_Responder_Control_codec extends base_codec
   private static Log log = LogFactory.getLog(Intermediary_Responder_Control_codec.class);
   public static Intermediary_Responder_Control_codec me = null;
 
-  private resultsExplanation_inline57_codec i_resultsexplanation_inline57_codec = resultsExplanation_inline57_codec.getCodec();
-  private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
   private Transaction_Results_codec i_transaction_results_codec = Transaction_Results_codec.getCodec();
+  private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
+  private resultsExplanation_inline57_codec i_resultsexplanation_inline57_codec = resultsExplanation_inline57_codec.getCodec();
 
   public synchronized static Intermediary_Responder_Control_codec getCodec()
   {

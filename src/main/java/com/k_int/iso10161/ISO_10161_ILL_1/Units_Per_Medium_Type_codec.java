@@ -12,8 +12,8 @@ public class Units_Per_Medium_Type_codec extends base_codec
   private static Log log = LogFactory.getLog(Units_Per_Medium_Type_codec.class);
   public static Units_Per_Medium_Type_codec me = null;
 
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
   private Supply_Medium_Type_codec i_supply_medium_type_codec = Supply_Medium_Type_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
 
   public synchronized static Units_Per_Medium_Type_codec getCodec()
   {

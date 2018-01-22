@@ -13,8 +13,8 @@ public class Send_To_List_TypeItem34_codec extends base_codec
   public static Send_To_List_TypeItem34_codec me = null;
 
   private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
-  private System_Address_codec i_system_address_codec = System_Address_codec.getCodec();
   private Account_Number_codec i_account_number_codec = Account_Number_codec.getCodec();
+  private System_Address_codec i_system_address_codec = System_Address_codec.getCodec();
 
   public synchronized static Send_To_List_TypeItem34_codec getCodec()
   {

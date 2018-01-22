@@ -30,8 +30,8 @@ public class Element_Truncated_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("element"=element);
-        sw.write("truncated_value"=truncated_value);
+        sw.write("element="+element);
+        sw.write("truncated_value="+truncated_value);
         sw.write("\n}\n");
         return sw.toString();
     }

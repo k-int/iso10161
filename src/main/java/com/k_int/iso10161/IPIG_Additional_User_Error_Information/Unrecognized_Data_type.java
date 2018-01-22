@@ -38,10 +38,10 @@ public class Unrecognized_Data_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("element"=element);
-        sw.write("data"=data);
-        sw.write("expected_format"=expected_format);
-        sw.write("supported_values"=supported_values);
+        sw.write("element="+element);
+        sw.write("data="+data);
+        sw.write("expected_format="+expected_format);
+        sw.write("supported_values="+supported_values);
         sw.write("\n}\n");
         return sw.toString();
     }

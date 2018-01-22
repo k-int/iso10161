@@ -12,15 +12,15 @@ public class Status_Or_Error_Report_codec extends base_codec
   private static Log log = LogFactory.getLog(Status_Or_Error_Report_codec.class);
   public static Status_Or_Error_Report_codec me = null;
 
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
-  private Reason_No_Report_codec i_reason_no_report_codec = Reason_No_Report_codec.getCodec();
-  private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
-  private status_or_error_report_extensions_inline21_codec i_status_or_error_report_extensions_inline21_codec = status_or_error_report_extensions_inline21_codec.getCodec();
-  private Transaction_Id_codec i_transaction_id_codec = Transaction_Id_codec.getCodec();
   private Status_Report_codec i_status_report_codec = Status_Report_codec.getCodec();
-  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
-  private Service_Date_Time_codec i_service_date_time_codec = Service_Date_Time_codec.getCodec();
+  private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
+  private Transaction_Id_codec i_transaction_id_codec = Transaction_Id_codec.getCodec();
   private Error_Report_codec i_error_report_codec = Error_Report_codec.getCodec();
+  private Service_Date_Time_codec i_service_date_time_codec = Service_Date_Time_codec.getCodec();
+  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
+  private status_or_error_report_extensions_inline21_codec i_status_or_error_report_extensions_inline21_codec = status_or_error_report_extensions_inline21_codec.getCodec();
+  private Reason_No_Report_codec i_reason_no_report_codec = Reason_No_Report_codec.getCodec();
 
   public synchronized static Status_Or_Error_Report_codec getCodec()
   {

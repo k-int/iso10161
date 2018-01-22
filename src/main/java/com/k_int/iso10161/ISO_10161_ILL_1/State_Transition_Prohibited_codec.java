@@ -12,8 +12,8 @@ public class State_Transition_Prohibited_codec extends base_codec
   private static Log log = LogFactory.getLog(State_Transition_Prohibited_codec.class);
   public static State_Transition_Prohibited_codec me = null;
 
-  private Current_State_codec i_current_state_codec = Current_State_codec.getCodec();
   private ILL_APDU_Type_codec i_ill_apdu_type_codec = ILL_APDU_Type_codec.getCodec();
+  private Current_State_codec i_current_state_codec = Current_State_codec.getCodec();
 
   public synchronized static State_Transition_Prohibited_codec getCodec()
   {

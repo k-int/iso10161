@@ -12,10 +12,10 @@ public class Error_Report_codec extends base_codec
   private static Log log = LogFactory.getLog(Error_Report_codec.class);
   public static Error_Report_codec me = null;
 
-  private Provider_Error_Report_codec i_provider_error_report_codec = Provider_Error_Report_codec.getCodec();
   private Report_Source_codec i_report_source_codec = Report_Source_codec.getCodec();
-  private User_Error_Report_codec i_user_error_report_codec = User_Error_Report_codec.getCodec();
   private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
+  private User_Error_Report_codec i_user_error_report_codec = User_Error_Report_codec.getCodec();
+  private Provider_Error_Report_codec i_provider_error_report_codec = Provider_Error_Report_codec.getCodec();
 
   public synchronized static Error_Report_codec getCodec()
   {

@@ -37,10 +37,10 @@ public class Search_Type_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("level_of_service"=level_of_service);
-        sw.write("need_before_date"=need_before_date);
-        sw.write("expiry_flag"=expiry_flag);
-        sw.write("expiry_date"=expiry_date);
+        sw.write("level_of_service="+level_of_service);
+        sw.write("need_before_date="+need_before_date);
+        sw.write("expiry_flag="+expiry_flag);
+        sw.write("expiry_date="+expiry_date);
         sw.write("\n}\n");
         return sw.toString();
     }

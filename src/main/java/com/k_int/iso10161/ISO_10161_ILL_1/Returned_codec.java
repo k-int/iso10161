@@ -12,16 +12,16 @@ public class Returned_codec extends base_codec
   private static Log log = LogFactory.getLog(Returned_codec.class);
   public static Returned_codec me = null;
 
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
-  private Supplemental_Item_Description_codec i_supplemental_item_description_codec = Supplemental_Item_Description_codec.getCodec();
-  private returned_extensions_inline12_codec i_returned_extensions_inline12_codec = returned_extensions_inline12_codec.getCodec();
-  private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
-  private Transportation_Mode_codec i_transportation_mode_codec = Transportation_Mode_codec.getCodec();
-  private Transaction_Id_codec i_transaction_id_codec = Transaction_Id_codec.getCodec();
   private ISO_Date_codec i_iso_date_codec = ISO_Date_codec.getCodec();
-  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
-  private Service_Date_Time_codec i_service_date_time_codec = Service_Date_Time_codec.getCodec();
   private Amount_codec i_amount_codec = Amount_codec.getCodec();
+  private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
+  private returned_extensions_inline12_codec i_returned_extensions_inline12_codec = returned_extensions_inline12_codec.getCodec();
+  private Transaction_Id_codec i_transaction_id_codec = Transaction_Id_codec.getCodec();
+  private Service_Date_Time_codec i_service_date_time_codec = Service_Date_Time_codec.getCodec();
+  private Transportation_Mode_codec i_transportation_mode_codec = Transportation_Mode_codec.getCodec();
+  private Supplemental_Item_Description_codec i_supplemental_item_description_codec = Supplemental_Item_Description_codec.getCodec();
+  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
 
   public synchronized static Returned_codec getCodec()
   {

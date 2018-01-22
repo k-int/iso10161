@@ -7,7 +7,7 @@ import com.k_int.codec.runtime.*;
 
 public class Person_Or_Institution_Symbol_type extends ChoiceType implements Serializable 
 {
-  private transient static LoggingContext log = LogFactory.getLog(Person_Or_Institution_Symbol_type.class);
+  private transient static Log log = LogFactory.getLog(Person_Or_Institution_Symbol_type.class);
   public transient static final int person_symbol_CID = 0;
   public transient static final int institution_symbol_CID = 1;
 

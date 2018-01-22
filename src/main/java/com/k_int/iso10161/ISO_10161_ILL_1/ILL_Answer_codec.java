@@ -12,19 +12,19 @@ public class ILL_Answer_codec extends base_codec
   private static Log log = LogFactory.getLog(ILL_Answer_codec.class);
   public static ILL_Answer_codec me = null;
 
-  private ill_answer_extensions_inline6_codec i_ill_answer_extensions_inline6_codec = ill_answer_extensions_inline6_codec.getCodec();
-  private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
   private results_explanation_inline5_codec i_results_explanation_inline5_codec = results_explanation_inline5_codec.getCodec();
-  private Transaction_Id_codec i_transaction_id_codec = Transaction_Id_codec.getCodec();
-  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
-  private Responder_Optional_Messages_Type_codec i_responder_optional_messages_type_codec = Responder_Optional_Messages_Type_codec.getCodec();
-  private EXTERNAL_codec i_external_codec = EXTERNAL_codec.getCodec();
-  private Already_Tried_List_Type_codec i_already_tried_list_type_codec = Already_Tried_List_Type_codec.getCodec();
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
-  private Supplemental_Item_Description_codec i_supplemental_item_description_codec = Supplemental_Item_Description_codec.getCodec();
   private Transaction_Results_codec i_transaction_results_codec = Transaction_Results_codec.getCodec();
+  private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
+  private Transaction_Id_codec i_transaction_id_codec = Transaction_Id_codec.getCodec();
+  private Already_Tried_List_Type_codec i_already_tried_list_type_codec = Already_Tried_List_Type_codec.getCodec();
+  private Supplemental_Item_Description_codec i_supplemental_item_description_codec = Supplemental_Item_Description_codec.getCodec();
   private Send_To_List_Type_codec i_send_to_list_type_codec = Send_To_List_Type_codec.getCodec();
+  private ill_answer_extensions_inline6_codec i_ill_answer_extensions_inline6_codec = ill_answer_extensions_inline6_codec.getCodec();
   private Service_Date_Time_codec i_service_date_time_codec = Service_Date_Time_codec.getCodec();
+  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
+  private EXTERNAL_codec i_external_codec = EXTERNAL_codec.getCodec();
+  private Responder_Optional_Messages_Type_codec i_responder_optional_messages_type_codec = Responder_Optional_Messages_Type_codec.getCodec();
 
   public synchronized static ILL_Answer_codec getCodec()
   {

@@ -57,15 +57,15 @@ public class Renew_Answer_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("protocol_version_num"=protocol_version_num);
-        sw.write("transaction_id"=transaction_id);
-        sw.write("service_date_time"=service_date_time);
-        sw.write("requester_id"=requester_id);
-        sw.write("responder_id"=responder_id);
-        sw.write("answer"=answer);
-        sw.write("date_due"=date_due);
-        sw.write("responder_note"=responder_note);
-        sw.write("renew_answer_extensions"=renew_answer_extensions);
+        sw.write("protocol_version_num="+protocol_version_num);
+        sw.write("transaction_id="+transaction_id);
+        sw.write("service_date_time="+service_date_time);
+        sw.write("requester_id="+requester_id);
+        sw.write("responder_id="+responder_id);
+        sw.write("answer="+answer);
+        sw.write("date_due="+date_due);
+        sw.write("responder_note="+responder_note);
+        sw.write("renew_answer_extensions="+renew_answer_extensions);
         sw.write("\n}\n");
         return sw.toString();
     }

@@ -34,8 +34,8 @@ public class ClientInfoData_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("infoType"=infoType);
-        sw.write("infoContent"=infoContent);
+        sw.write("infoType="+infoType);
+        sw.write("infoContent="+infoContent);
         sw.write("\n}\n");
         return sw.toString();
     }

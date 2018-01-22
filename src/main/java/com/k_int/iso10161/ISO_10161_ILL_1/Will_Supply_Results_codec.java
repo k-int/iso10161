@@ -12,11 +12,11 @@ public class Will_Supply_Results_codec extends base_codec
   private static Log log = LogFactory.getLog(Will_Supply_Results_codec.class);
   public static Will_Supply_Results_codec me = null;
 
-  private Electronic_Delivery_Service_codec i_electronic_delivery_service_codec = Electronic_Delivery_Service_codec.getCodec();
   private ISO_Date_codec i_iso_date_codec = ISO_Date_codec.getCodec();
   private locations_inline40_codec i_locations_inline40_codec = locations_inline40_codec.getCodec();
-  private Enumerated_codec i_enumerated_codec = Enumerated_codec.getCodec();
   private Postal_Address_codec i_postal_address_codec = Postal_Address_codec.getCodec();
+  private Enumerated_codec i_enumerated_codec = Enumerated_codec.getCodec();
+  private Electronic_Delivery_Service_codec i_electronic_delivery_service_codec = Electronic_Delivery_Service_codec.getCodec();
 
   public synchronized static Will_Supply_Results_codec getCodec()
   {

@@ -22,9 +22,9 @@ public class History_codec extends base_codec
   private static Log log = LogFactory.getLog(History_codec.class);
   public static History_codec me = null;
 
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
   private GeneralString_codec i_generalstring_codec = GeneralString_codec.getCodec();
   private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
 
   public synchronized static History_codec getCodec()
   {

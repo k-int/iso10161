@@ -13,26 +13,26 @@ public class ILL_Request_codec extends base_codec
   public static ILL_Request_codec me = null;
 
   private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
-  private iLL_service_type_inline0_codec i_ill_service_type_inline0_codec = iLL_service_type_inline0_codec.getCodec();
-  private Search_Type_codec i_search_type_codec = Search_Type_codec.getCodec();
   private Place_On_Hold_Type_codec i_place_on_hold_type_codec = Place_On_Hold_Type_codec.getCodec();
   private Transaction_Id_codec i_transaction_id_codec = Transaction_Id_codec.getCodec();
-  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
-  private EXTERNAL_codec i_external_codec = EXTERNAL_codec.getCodec();
-  private Cost_Info_Type_codec i_cost_info_type_codec = Cost_Info_Type_codec.getCodec();
-  private iLL_request_extensions_inline2_codec i_ill_request_extensions_inline2_codec = iLL_request_extensions_inline2_codec.getCodec();
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
-  private Third_Party_Info_Type_codec i_third_party_info_type_codec = Third_Party_Info_Type_codec.getCodec();
-  private Supplemental_Item_Description_codec i_supplemental_item_description_codec = Supplemental_Item_Description_codec.getCodec();
   private Delivery_Address_codec i_delivery_address_codec = Delivery_Address_codec.getCodec();
-  private Requester_Optional_Messages_Type_codec i_requester_optional_messages_type_codec = Requester_Optional_Messages_Type_codec.getCodec();
-  private Transaction_Type_codec i_transaction_type_codec = Transaction_Type_codec.getCodec();
-  private Delivery_Service_codec i_delivery_service_codec = Delivery_Service_codec.getCodec();
-  private supply_medium_info_type_inline1_codec i_supply_medium_info_type_inline1_codec = supply_medium_info_type_inline1_codec.getCodec();
-  private BOOL_codec i_bool_codec = BOOL_codec.getCodec();
+  private iLL_service_type_inline0_codec i_ill_service_type_inline0_codec = iLL_service_type_inline0_codec.getCodec();
+  private Third_Party_Info_Type_codec i_third_party_info_type_codec = Third_Party_Info_Type_codec.getCodec();
+  private iLL_request_extensions_inline2_codec i_ill_request_extensions_inline2_codec = iLL_request_extensions_inline2_codec.getCodec();
   private Client_Id_codec i_client_id_codec = Client_Id_codec.getCodec();
+  private Supplemental_Item_Description_codec i_supplemental_item_description_codec = Supplemental_Item_Description_codec.getCodec();
+  private Cost_Info_Type_codec i_cost_info_type_codec = Cost_Info_Type_codec.getCodec();
+  private Requester_Optional_Messages_Type_codec i_requester_optional_messages_type_codec = Requester_Optional_Messages_Type_codec.getCodec();
+  private BOOL_codec i_bool_codec = BOOL_codec.getCodec();
   private Service_Date_Time_codec i_service_date_time_codec = Service_Date_Time_codec.getCodec();
+  private Transaction_Type_codec i_transaction_type_codec = Transaction_Type_codec.getCodec();
+  private supply_medium_info_type_inline1_codec i_supply_medium_info_type_inline1_codec = supply_medium_info_type_inline1_codec.getCodec();
   private Item_Id_codec i_item_id_codec = Item_Id_codec.getCodec();
+  private Search_Type_codec i_search_type_codec = Search_Type_codec.getCodec();
+  private Delivery_Service_codec i_delivery_service_codec = Delivery_Service_codec.getCodec();
+  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
+  private EXTERNAL_codec i_external_codec = EXTERNAL_codec.getCodec();
 
   public synchronized static ILL_Request_codec getCodec()
   {

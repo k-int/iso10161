@@ -34,9 +34,9 @@ public class Rights_Information_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("rights_information_country"=rights_information_country);
-        sw.write("rights_information_type"=rights_information_type);
-        sw.write("rights_information_value"=rights_information_value);
+        sw.write("rights_information_country="+rights_information_country);
+        sw.write("rights_information_type="+rights_information_type);
+        sw.write("rights_information_value="+rights_information_value);
         sw.write("\n}\n");
         return sw.toString();
     }

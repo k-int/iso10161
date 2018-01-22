@@ -16,9 +16,9 @@ public class APDU_Delivery_Parameters_codec extends base_codec
   private static Log log = LogFactory.getLog(APDU_Delivery_Parameters_codec.class);
   public static APDU_Delivery_Parameters_codec me = null;
 
+  private aliases_inline46_codec i_aliases_inline46_codec = aliases_inline46_codec.getCodec();
   private encoding_inline45_codec i_encoding_inline45_codec = encoding_inline45_codec.getCodec();
   private System_Address_codec i_system_address_codec = System_Address_codec.getCodec();
-  private aliases_inline46_codec i_aliases_inline46_codec = aliases_inline46_codec.getCodec();
 
   public synchronized static APDU_Delivery_Parameters_codec getCodec()
   {

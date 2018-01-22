@@ -12,8 +12,8 @@ public class Date_Due_codec extends base_codec
   private static Log log = LogFactory.getLog(Date_Due_codec.class);
   public static Date_Due_codec me = null;
 
-  private BOOL_codec i_bool_codec = BOOL_codec.getCodec();
   private ISO_Date_codec i_iso_date_codec = ISO_Date_codec.getCodec();
+  private BOOL_codec i_bool_codec = BOOL_codec.getCodec();
 
   public synchronized static Date_Due_codec getCodec()
   {

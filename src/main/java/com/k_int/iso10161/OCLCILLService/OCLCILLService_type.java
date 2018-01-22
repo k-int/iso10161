@@ -25,7 +25,7 @@ public class OCLCILLService_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("oCLCILLServiceType"=oCLCILLServiceType);
+        sw.write("oCLCILLServiceType="+oCLCILLServiceType);
         sw.write("\n}\n");
         return sw.toString();
     }

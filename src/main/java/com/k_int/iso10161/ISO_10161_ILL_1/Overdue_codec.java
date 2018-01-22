@@ -12,13 +12,13 @@ public class Overdue_codec extends base_codec
   private static Log log = LogFactory.getLog(Overdue_codec.class);
   public static Overdue_codec me = null;
 
-  private Integer_codec i_integer_codec = Integer_codec.getCodec();
-  private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
-  private Date_Due_codec i_date_due_codec = Date_Due_codec.getCodec();
   private overdue_extensions_inline14_codec i_overdue_extensions_inline14_codec = overdue_extensions_inline14_codec.getCodec();
+  private System_Id_codec i_system_id_codec = System_Id_codec.getCodec();
   private Transaction_Id_codec i_transaction_id_codec = Transaction_Id_codec.getCodec();
-  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
   private Service_Date_Time_codec i_service_date_time_codec = Service_Date_Time_codec.getCodec();
+  private Date_Due_codec i_date_due_codec = Date_Due_codec.getCodec();
+  private ILL_String_codec i_ill_string_codec = ILL_String_codec.getCodec();
+  private Integer_codec i_integer_codec = Integer_codec.getCodec();
 
   public synchronized static Overdue_codec getCodec()
   {

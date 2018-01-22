@@ -33,9 +33,9 @@ public class Extension_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("identifier"=identifier);
-        sw.write("critical"=critical);
-        sw.write("item"=item);
+        sw.write("identifier="+identifier);
+        sw.write("critical="+critical);
+        sw.write("item="+item);
         sw.write("\n}\n");
         return sw.toString();
     }

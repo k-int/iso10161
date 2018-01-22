@@ -34,9 +34,9 @@ public class OCLC_Prism_Ill_ErrorItem41_type implements Serializable
         java.io.StringWriter sw = new java.io.StringWriter();
         sw.write("\n{\n");
 
-        sw.write("prism_Ill_Field_Id"=prism_Ill_Field_Id);
-        sw.write("prism_Ill_Error_Code"=prism_Ill_Error_Code);
-        sw.write("prism_Ill_Error_Text"=prism_Ill_Error_Text);
+        sw.write("prism_Ill_Field_Id="+prism_Ill_Field_Id);
+        sw.write("prism_Ill_Error_Code="+prism_Ill_Error_Code);
+        sw.write("prism_Ill_Error_Text="+prism_Ill_Error_Text);
         sw.write("\n}\n");
         return sw.toString();
     }

@@ -12,9 +12,9 @@ public class Cost_Info_Type_codec extends base_codec
   private static Log log = LogFactory.getLog(Cost_Info_Type_codec.class);
   public static Cost_Info_Type_codec me = null;
 
-  private BOOL_codec i_bool_codec = BOOL_codec.getCodec();
-  private Account_Number_codec i_account_number_codec = Account_Number_codec.getCodec();
   private Amount_codec i_amount_codec = Amount_codec.getCodec();
+  private Account_Number_codec i_account_number_codec = Account_Number_codec.getCodec();
+  private BOOL_codec i_bool_codec = BOOL_codec.getCodec();
 
   public synchronized static Cost_Info_Type_codec getCodec()
   {

@@ -12,8 +12,8 @@ public class Responder_Optional_Messages_Type_codec extends base_codec
   private static Log log = LogFactory.getLog(Responder_Optional_Messages_Type_codec.class);
   public static Responder_Optional_Messages_Type_codec me = null;
 
-  private BOOL_codec i_bool_codec = BOOL_codec.getCodec();
   private Enumerated_codec i_enumerated_codec = Enumerated_codec.getCodec();
+  private BOOL_codec i_bool_codec = BOOL_codec.getCodec();
 
   public synchronized static Responder_Optional_Messages_Type_codec getCodec()
   {
