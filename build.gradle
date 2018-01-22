@@ -38,7 +38,7 @@ jar {
 
 task compileASN() {
   doLast() {
-    System.out.println("complileASN()");
+    System.out.println("complileASN() "+System.getProperty("CodecBasePackage"));
 
     if( !generatedSrcDir.exists() ) {
       // Create all folders up-to and including B
@@ -46,6 +46,7 @@ task compileASN() {
     }
 
     String[] args = ['./ill9702.asn'];
+    System.setProperty("CodecBasePackage", "com.k_int.iso10161");
     runParser.main(args);
   }
 }
