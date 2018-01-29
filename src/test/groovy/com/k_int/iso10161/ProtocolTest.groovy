@@ -31,8 +31,7 @@ class ProtocolTest extends Specification {
               service_date_time: new java.util.Date(),
               transaction_type:1,
               iLL_service_type:1,
-              requester_optional_messages:[
-              ],
+              requester_optional_messages:[:],
               place_on_hold:0,
               item_id:[
                 title:'A test title'
@@ -42,6 +41,9 @@ class ProtocolTest extends Specification {
             ]));
 
       then:
-        expect 1==1
+        println('updated');
+
+      expect:
+        1==1;
     }
 }
