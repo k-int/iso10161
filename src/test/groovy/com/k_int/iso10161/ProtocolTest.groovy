@@ -28,7 +28,10 @@ class ProtocolTest extends Specification {
                   transaction_qualifier:java.util.UUID.randomUUID().toString(),
                 ]
               ],
-              service_date_time: new java.util.Date(),
+              service_date_time: [
+                date_time_of_this_service:[:],
+                date_time_of_original_service:[:],
+              ],
               transaction_type:1,
               iLL_service_type:1,
               requester_optional_messages:[:],
