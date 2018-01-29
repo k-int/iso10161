@@ -35,7 +35,7 @@ public class ISO10161DataBinder {
   public static ILL_Request_type bindRequest(Map message_data) {
     ILL_Request_type result = new ILL_Request_type()
 
-    if ( message_data.protocol_version_num ) result.protocol_version_num = new BigInteger(message_data.protocol_version_num);
+    if ( message_data.protocol_version_num ) result.protocol_version_num = bindBigInteger(message_data.protocol_version_num);
 
     /* Mandatory Transaction_Id_type transaction_id */
     if ( message_data.transaction_id ) {
@@ -56,25 +56,44 @@ public class ISO10161DataBinder {
     result.responder_id = bindSystemId(message_data.responder_id);   
 
     /* Mandatory java.math.BigInteger transaction_type */
+    result.transaction_type = bindBigInteger(message_data.transaction_type);
+
     /* Optional Delivery_Address_type delivery_address */
     /* Optional Delivery_Service_type delivery_service */
     /* Optional Delivery_Address_type billing_address */
+
     /* Mandatory java.util.Vector iLL_service_type */
+
     /* Optional EXTERNAL_type responder_specific_service */
+
     /* Mandatory Requester_Optional_Messages_Type_type requester_optional_messages */
+
     /* Optional Search_Type_type search_type */
     /* Optional java.util.Vector supply_medium_info_type */
+
     /* Mandatory java.math.BigInteger place_on_hold */
+
     /* Optional Client_Id_type client_id */
+
     /* Mandatory Item_Id_type item_id */
+    result.item_id = bindItemId(message_data.item_id);
+
     /* Optional java.util.Vector supplemental_item_description */
     /* Optional Cost_Info_Type_type cost_info_type */
     /* Optional ILL_String_type copyright_compliance */
     /* Optional Third_Party_Info_Type_type third_party_info_type */
+
     /* Mandatory Boolean retry_flag */
+    result.retry_flag = message_data.retry_flag;
+
     /* Mandatory Boolean forward_flag */
+    result.forward_flag = message_data.forward_flag;
+
     /* Optional ILL_String_type requester_note */
+    result.requester_note = bindILLString(message_data.requester_note);
+
     /* Optional ILL_String_type forward_note */
+    result.forward_note = bindILLString(message_data.forward_note);
 
     return result;
   }
@@ -174,4 +193,92 @@ public class ISO10161DataBinder {
     return result;
   }
   
+  public static Item_Id_type bindItemId(Map message_data) {
+    Item_Id_type result = null;
+
+    if ( message_data ) {
+      result = new Item_Id_type();
+      /* Optional BigInteger item_type */
+      result.item_type = bindBigInteger(message_data.item_type);
+
+      /* Optional java.math.BigInteger held_medium_type */
+      result.held_medium_type = bindBigInteger(message_data.held_medium_type);
+
+      /* Optional ILL_String_type call_number */
+      result.call_number = bindILLString(message_data.call_number);
+
+      /* Optional ILL_String_type author */
+      result.author = bindILLString(message_data.author);
+
+      /* Optional ILL_String_type title */
+      result.title = bindILLString(message_data.title);
+
+      /* Optional ILL_String_type sub_title */
+      result.sub_title = bindILLString(message_data.sub_title);
+
+      /* Optional ILL_String_type sponsoring_body */
+      result.sponsoring_body = bindILLString(message_data.sponsoring_body);
+
+      /* Optional ILL_String_type place_of_publication */
+      result.place_of_publication = bindILLString(message_data.place_of_publication);
+
+      /* Optional ILL_String_type publisher */
+      result.publisher = bindILLString(message_data.publisher);
+
+      /* Optional ILL_String_type series_title_number */
+      result.series_title_number = bindILLString(message_data.series_title_number);
+
+      /* Optional ILL_String_type volume_issue */
+      result.volume_issue = bindILLString(message_data.volume_issue);
+
+      /* Optional ILL_String_type edition */
+      result.edition = bindILLString(message_data.edition);
+
+      /* Optional ILL_String_type publication_date */
+      result.publication_date = bindILLString(message_data.publication_date);
+
+      /* Optional ILL_String_type publication_date_of_component */
+      result.publication_date_of_component = bindILLString(message_data.publication_date_of_component);
+
+      /* Optional ILL_String_type author_of_article */
+      result.author_of_article = bindILLString(message_data.author_of_article);
+
+      /* Optional ILL_String_type title_of_article */
+      result.title_of_article = bindILLString(message_data.title_of_article);
+
+      /* Optional ILL_String_type pagination */
+      result.pagination = bindILLString(message_data.pagination);
+
+      /* Optional EXTERNAL_type national_bibliography_no */
+
+      /* Optional ILL_String_type iSBN */
+      result.iSBN = bindILLString(message_data.iSBN);
+
+      /* Optional ILL_String_type iSSN */
+      result.iSSN = bindILLString(message_data.iSSN);
+
+      /* Optional EXTERNAL_type system_no */
+
+      /* Optional ILL_String_type additional_no_letters */
+      result.additional_no_letters = bindILLString(message_data.additional_no_letters);
+
+      /* Optional ILL_String_type verification_reference_source */
+      result.verification_reference_source = bindILLString(message_data.verification_reference_source);
+    }
+
+    return result;
+  }
+
+  public static BigInteger bindBigInteger(Object value) {
+    BigInteger result = null;
+    if ( value ) {
+      if ( value instanceof BigInteger ) {
+        result = value;
+      }
+      else {
+        result = new BigInteger(value);
+      }
+    }
+    return result;
+  }
 }
