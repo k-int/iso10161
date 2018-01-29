@@ -16,40 +16,26 @@ class ProtocolTest extends Specification {
     def testRequestEncoding() {
       when:
         ISO10160ASE tcp_adapter = new ISO10160ASE()
-        tcp_adapter.send(
-          ISO10161DataBinder.toISO(
+
+        tcp_adapter.send('localhost',499,
+          ISO10161DataBinder.toISO('REQUEST',
             [
-              '__choiceHint':'com.k_int.iso10161.ISO_10161_ILL_1.ILL_Request_type',
               protocol_version_num:1,
               transaction_id:[
                 // Transaction_Id_type
                 initial_requester_id:[
-                  // System_Id_type
-                  transaction_group_qualifier:[
-                    // ILL_String_type
-                  ],
-                  transaction_qualifier:[
-                    // ILL_String_type
-                  ]
+                  transaction_group_qualifier:java.util.UUID.randomUUID().toString(),
+                  transaction_qualifier:java.util.UUID.randomUUID().toString(),
                 ]
               ],
-              service_date_time:[
-                // Service_Date_Time_type
-              ],
-              requester_id:[
-                // System_Id_type
-              ],
-              responder_id:[
-                // System_Id_type
-              ],
+              service_date_time: new java.util.Date(),
               transaction_type:1,
               iLL_service_type:1,
               requester_optional_messages:[
-                // Requester_Optional_Messages_Type_type
               ],
               place_on_hold:0,
               item_id:[
-                // Item_Id_type
+                title:'A test title'
               ],
               retry_flag:false,
               forward_flag:false
