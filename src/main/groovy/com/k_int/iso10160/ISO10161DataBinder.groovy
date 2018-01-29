@@ -68,11 +68,13 @@ public class ISO10161DataBinder {
     /* Optional EXTERNAL_type responder_specific_service */
 
     /* Mandatory Requester_Optional_Messages_Type_type requester_optional_messages */
+    result.requester_optional_messages = bindRequesterOptionalMessages(message_data.requester_optional_messages);
 
     /* Optional Search_Type_type search_type */
     /* Optional java.util.Vector supply_medium_info_type */
 
     /* Mandatory java.math.BigInteger place_on_hold */
+    result.place_on_hold = bindBigInteger(message_data.place_on_hold);
 
     /* Optional Client_Id_type client_id */
 
@@ -306,6 +308,36 @@ public class ISO10161DataBinder {
             break;
         }
       }
+    }
+    return result;
+  }
+
+  public static Requester_Optional_Messages_Type_type bindRequesterOptionalMessages(Map message_data) {
+    Requester_Optional_Messages_Type_type result = null;
+    if ( message_data ) {
+      result = new Requester_Optional_Messages_Type_type();
+      /* Mandatory Boolean can_send_RECEIVED */
+      result.can_send_RECEIVED = bindBoolean(message_data.can_send_RECEIVED);
+
+      /* Mandatory Boolean can_send_RETURNED */
+      result.can_send_RETURNED = bindBoolean(message_data.can_send_RETURNED);
+
+      /* Mandatory BigInteger requester_SHIPPED */
+      result.requester_SHIPPED = bindBigInteger(message_data.requester_SHIPPED);
+
+      /* Mandatory BigInteger requester_CHECKED_IN */
+      result.requester_CHECKED_IN = bindBigInteger(message_data.requester_CHECKED_IN);
+    }
+    return result;
+  }
+
+  public static Boolean bindBoolean(Object value) {
+    Boolean result = null;
+    if ( value instanceof Boolean ) {
+      result = (Boolean)value;
+    }
+    else {
+      result = new Boolean(value);
     }
     return result;
   }

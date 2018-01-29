@@ -29,12 +29,17 @@ class ProtocolTest extends Specification {
                 ]
               ],
               service_date_time: [
-                date_time_of_this_service:[:],
-                date_time_of_original_service:[:],
+                date_time_of_this_service:[date:'20170101', time:'0000'],
+                date_time_of_original_service:[date:'20180101',time:'1111'],
               ],
-              transaction_type:1,
+              transaction_type:BigInteger.valueOf(1),  // 1:Simple, 2:Chained, 3:Partitioned
               iLL_service_type:['loan','copy-non-returnable','locations','estimate','responder-specific'],
-              requester_optional_messages:[:],
+              requester_optional_messages:[
+                can_send_RECEIVED:Boolean.TRUE,
+                can_send_RETURNED:Boolean.TRUE,
+                requester_SHIPPED:new BigInteger(0),
+                requester_CHECKED_IN:new BigInteger(0)
+              ],
               place_on_hold:0,
               item_id:[
                 title:'A test title'
