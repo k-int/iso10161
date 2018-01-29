@@ -33,7 +33,7 @@ class ProtocolTest extends Specification {
                 date_time_of_original_service:[:],
               ],
               transaction_type:1,
-              iLL_service_type:1,
+              iLL_service_type:['loan','copy-non-returnable','locations','estimate','responder-specific'],
               requester_optional_messages:[:],
               place_on_hold:0,
               item_id:[

@@ -63,6 +63,7 @@ public class ISO10161DataBinder {
     /* Optional Delivery_Address_type billing_address */
 
     /* Mandatory java.util.Vector iLL_service_type */
+    result.iLL_service_type = bindIllService(message_data.iLL_service_type);
 
     /* Optional EXTERNAL_type responder_specific_service */
 
@@ -277,6 +278,33 @@ public class ISO10161DataBinder {
       }
       else {
         result = new BigInteger(value);
+      }
+    }
+    return result;
+  }
+
+  public static Vector bindIllService(List message_data) {
+    Vector result = null;
+    if ( message_data ) {
+      result = new Vector();
+      message_data.each { svc -> 
+        switch ( svc ) {
+          case 'loan':
+            result.add(new BigInteger(1));
+            break;
+          case 'copy-non-returnable':
+            result.add(new BigInteger(2));
+            break;
+          case 'locations':
+            result.add(new BigInteger(3));
+            break;
+          case 'estimate':
+            result.add(new BigInteger(4));
+            break;
+          case 'responder-specific':
+            result.add(new BigInteger(5));
+            break;
+        }
       }
     }
     return result;
