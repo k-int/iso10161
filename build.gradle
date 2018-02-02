@@ -32,7 +32,7 @@ dependencies {
 def generatedSrcDir = new File(buildDir, "generated/src/main/java/")
 
 group = 'com.k_int'
-sourceCompatibility = 1.7
+sourceCompatibility = 1.8
 version = '1.0'
 jar {
     manifest {
@@ -64,3 +64,12 @@ uploadArchives {
         }
     }
 }
+
+test {
+    systemProperties 'logback.configurationFile' : new File(projectDir,'src/test/resources/logback-test.xml').absolutePath
+    testLogging {
+        outputs.upToDateWhen {false}
+        showStandardStreams = true
+    }
+}
+
