@@ -12,6 +12,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import com.k_int.iso10161.ISO_10161_ILL_1.ILL_APDU_codec
 import com.k_int.iso10161.ISO_10161_ILL_1.ILL_APDU_type
+import com.k_int.iso10160.ISO10161DataBinder
 
 /**
  * Test the traditional socket based client and server endpoints.
@@ -80,10 +81,8 @@ class ProtocolEndpointTest extends Specification {
               protocol_version_num:1,
               transaction_id:[
                 // Transaction_Id_type
-                initial_requester_id:[
-                  transaction_group_qualifier:java.util.UUID.randomUUID().toString(),
-                  transaction_qualifier:java.util.UUID.randomUUID().toString(),
-                ]
+                transaction_group_qualifier:java.util.UUID.randomUUID().toString(),
+                transaction_qualifier:java.util.UUID.randomUUID().toString(),
               ],
               service_date_time: [
                 date_time_of_this_service:[date:'20170101', time:'0000'],
@@ -94,10 +93,10 @@ class ProtocolEndpointTest extends Specification {
               requester_optional_messages:[
                 can_send_RECEIVED:Boolean.TRUE,
                 can_send_RETURNED:Boolean.TRUE,
-                requester_SHIPPED:new BigInteger(0),
-                requester_CHECKED_IN:new BigInteger(0)
+                requester_SHIPPED:new BigInteger(2),  // 1=Requires,2=Desires,3=Neither
+                requester_CHECKED_IN:new BigInteger(2)  // 1=Requires,2=Desires,3=Neither
               ],
-              place_on_hold:0,
+              place_on_hold: new BigInteger(3),  // 1=Yes,2=No,3=According to policy
               item_id:[
                 title:'A test title'
               ],
@@ -121,10 +120,11 @@ class ProtocolEndpointTest extends Specification {
       }
       logger.debug("There are ${received_apdus.size()} APDUs waiting.. Check values(${received_apdus})");
       assert num_apdus == received_apdus.size()
+      logger.debug(received_apdus.get(0).toString());
 
     expect:
       // That the values we received are the right ones in the right order
-      logger.debug(received_apdus.get(0));
+      1==1
 
     cleanup:
       logger.debug("Shutdown protocol server (And wait for it to complete)");
