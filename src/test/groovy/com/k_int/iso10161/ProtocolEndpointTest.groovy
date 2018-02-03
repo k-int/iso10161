@@ -76,7 +76,8 @@ class ProtocolEndpointTest extends Specification {
       client.start()
 
       logger.debug("Send int value 1002");
-      client.send(ISO10161DataBinder.toISO('REQUEST',
+      client.send(ISO10161DataBinder.toISO(
+          [request:
             [
               protocol_version_num:1,
               transaction_id:[
@@ -102,7 +103,7 @@ class ProtocolEndpointTest extends Specification {
               ],
               retry_flag:false,
               forward_flag:false
-            ]));
+            ]]));
 
       // All done, close client
       logger.debug("Close client");

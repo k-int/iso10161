@@ -14,19 +14,15 @@ public class ISO10161DataBinder {
    * Accept a map of maps describiing an ILL APDU and convert to an actual DTO which can be encoded.
    * See src/test/groovy/com/k_int/iso10161/ProtocolTest.groovy for example messages.
    */
-  public static ILL_APDU_type toISO(String type, Map message_data) {
+  public static ILL_APDU_type toISO(Map message_data) {
     ILL_APDU_type result = new ILL_APDU_type();
 
-    if ( message_data ) {
-      switch ( type ) {
-        case 'REQUEST':
-          result.which = ILL_APDU_type.ill_request_var_CID;
-          result.o = bindRequest(message_data);
-          break;
-        default:
-          throw new RuntimeException('Unhandled message type: '+type);
-          break;
-      }
+    if ( message_data.request ) {
+      result.which = ILL_APDU_type.ill_request_var_CID;
+      result.o = bindRequest(message_data.request);
+    }
+    else {
+      throw new RuntimeException('Unhandled root message type: '+message_data.keySet());
     }
     
     return result;
