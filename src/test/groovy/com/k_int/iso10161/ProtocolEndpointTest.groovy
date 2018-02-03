@@ -34,7 +34,7 @@ class ProtocolEndpointTest extends Specification {
       // Create a new protocol association observer that will collect all incoming APDUs (BigInts in this case)
       ProtocolAssociationObserver pao = new ProtocolAssociationObserver<ILL_APDU_type>() {
         public void notify(ProtocolAssociation pa, ILL_APDU_type apdu) {
-          logger.debug("ProtocolAssociationObserver::notify - Incoming ${apdu} from ${pa}");
+          logger.debug("ProtocolAssociationObserver::notify - Incoming ${apdu.which} from ${pa}");
           synchronized(received_apdus) {
             received_apdus.add(apdu)
             received_apdus.notifyAll()
@@ -120,7 +120,7 @@ class ProtocolEndpointTest extends Specification {
           received_apdus.wait(10000);
         }
       }
-      logger.debug("There are ${received_apdus.size()} APDUs waiting.. Check values(${received_apdus})");
+      logger.debug("There are ${received_apdus.size()} APDUs waiting..");
       assert num_apdus == received_apdus.size()
 
       def json_version = ISO10161ToJsonDataBinder.toJson(received_apdus.get(0));
