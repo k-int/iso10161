@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import com.k_int.iso10161.ISO_10161_ILL_1.ILL_APDU_codec
 import com.k_int.iso10161.ISO_10161_ILL_1.ILL_APDU_type
 import com.k_int.iso10160.ISO10161DataBinder
+import com.k_int.iso10160.ISO10161ToJsonDataBinder
 
 /**
  * Test the traditional socket based client and server endpoints.
@@ -121,7 +122,9 @@ class ProtocolEndpointTest extends Specification {
       }
       logger.debug("There are ${received_apdus.size()} APDUs waiting.. Check values(${received_apdus})");
       assert num_apdus == received_apdus.size()
-      logger.debug(received_apdus.get(0).toString());
+
+      def json_version = ISO10161ToJsonDataBinder.toJson(received_apdus.get(0));
+      logger.debug("Json version: ${json_version}");
 
     expect:
       // That the values we received are the right ones in the right order
