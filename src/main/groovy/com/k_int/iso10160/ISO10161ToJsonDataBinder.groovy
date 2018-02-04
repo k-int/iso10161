@@ -121,6 +121,21 @@ public class ISO10161ToJsonDataBinder {
 
   public static Map bindServiceDateTime(Service_Date_Time_type service_date_time) {
     Map result = new java.util.HashMap();
+
+    if ( service_date_time.date_time_of_this_service ) {
+      Map dts = new java.util.HashMap();
+      dts.date = service_date_time.date_time_of_this_service.date
+      dts.time = service_date_time.date_time_of_this_service.time
+      result.date_time_of_this_service = dts;
+    }
+
+    if ( service_date_time.date_time_of_original_service ) {
+      Map dtos = new java.util.HashMap();
+      dtos.date = service_date_time.date_time_of_original_service.date
+      dtos.time = service_date_time.date_time_of_original_service.time
+      result.date_time_of_original_service = dtos;
+    }
+
     result;
   }
 

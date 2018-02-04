@@ -76,9 +76,7 @@ class ProtocolEndpointTest extends Specification {
       // Start client thread
       client.start()
 
-      logger.debug("Send int value 1002");
-      client.send(ISO10161DataBinder.toISO(
-          [request:
+      Map source_request = [request:
             [
               protocol_version_num:1,
               transaction_id:[
@@ -104,7 +102,10 @@ class ProtocolEndpointTest extends Specification {
               ],
               retry_flag:false,
               forward_flag:false
-            ]]));
+            ]];
+
+      logger.debug("Send int value 1002");
+      client.send(ISO10161DataBinder.toISO(source_request));
 
       // All done, close client
       logger.debug("Close client");
@@ -123,12 +124,16 @@ class ProtocolEndpointTest extends Specification {
       logger.debug("There are ${received_apdus.size()} APDUs waiting..");
       assert num_apdus == received_apdus.size()
 
-      def json_version = ISO10161ToJsonDataBinder.toJson(received_apdus.get(0));
-      logger.debug("Json version: ${json_version}");
+      Map received_request = ISO10161ToJsonDataBinder.toJson(received_apdus.get(0));
+      logger.debug("Json version: ${received_request}");
+
+      // Get the difference between the Json/Map sent, and the one received - they should be identical
+      com.google.common.collect.MapDifference req_diff = com.google.common.collect.Maps.difference(source_request,received_request);
+      logger.debug("Differences beween sent and received maps: ${req_diff.entriesDiffering()}");
 
     expect:
       // That the values we received are the right ones in the right order
-      1==1
+      req_diff.areEqual()
 
     cleanup:
       logger.debug("Shutdown protocol server (And wait for it to complete)");
