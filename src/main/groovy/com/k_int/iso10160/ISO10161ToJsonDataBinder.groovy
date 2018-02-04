@@ -49,6 +49,8 @@ public class ISO10161ToJsonDataBinder {
 
     /* Optional member EXTERNAL_type responder_specific_service */
     /* Mandatory member Requester_Optional_Messages_Type_type requester_optional_messages */
+    result['requester_optional_messages'] = bindRequesterOptionalMessages(request.requester_optional_messages);
+
     /* Optional member Search_Type_type search_type */
     /* Optional member java.util.Vector supply_medium_info_type */
     /* Mandatory member java.math.BigInteger place_on_hold */
@@ -237,6 +239,15 @@ public class ISO10161ToJsonDataBinder {
           break;
       }
     }
+    return result;
+  }
+
+  public static Map bindRequesterOptionalMessages(Requester_Optional_Messages_Type_type requester_optional_messages) {
+    Map result = new java.util.HashMap();
+    result.can_send_RECEIVED = requester_optional_messages.can_send_RECEIVED;
+    result.can_send_RETURNED = requester_optional_messages.can_send_RETURNED;
+    result.requester_SHIPPED = requester_optional_messages.requester_SHIPPED;
+    result.requester_CHECKED_IN = requester_optional_messages.requester_CHECKED_IN;
     return result;
   }
 }
