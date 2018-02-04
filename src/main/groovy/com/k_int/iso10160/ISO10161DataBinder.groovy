@@ -134,7 +134,7 @@ public class ISO10161DataBinder {
       }
 
       /* Optional member date_time_of_original_service_inline36_type date_time_of_original_service */
-      if ( message_data.date_time_of_original_service_inline36_type ) {
+      if ( message_data.date_time_of_original_service ) {
         result.date_time_of_original_service = new date_time_of_original_service_inline36_type();
         if ( message_data.date_time_of_original_service.date ) {
           result.date_time_of_original_service.date = message_data.date_time_of_original_service.date

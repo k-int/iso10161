@@ -54,6 +54,8 @@ public class ISO10161ToJsonDataBinder {
     /* Optional member Search_Type_type search_type */
     /* Optional member java.util.Vector supply_medium_info_type */
     /* Mandatory member java.math.BigInteger place_on_hold */
+    result['place_on_hold'] = request.place_on_hold;
+
     /* Optional member Client_Id_type client_id */
     /* Mandatory member Item_Id_type item_id */
     if ( request.item_id ) result.item_id = bindItemId(request.item_id);
@@ -64,10 +66,10 @@ public class ISO10161ToJsonDataBinder {
     /* Optional member Third_Party_Info_Type_type third_party_info_type */
 
     /* Mandatory member Boolean retry_flag */
-    if ( request.retry_flag ) result.retry_flag = request.retry_flag;
+    if ( request.retry_flag != null ) result.retry_flag = request.retry_flag;
 
     /* Mandatory member Boolean forward_flag */
-    if ( request.forward_flag ) result.forward_flag = request.forward_flag;
+    if ( request.forward_flag != null ) result.forward_flag = request.forward_flag;
 
     /* Optional member ILL_String_type requester_note */
     if ( request.requester_note ) result.requester_note = request.requester_note.o?.toString()
