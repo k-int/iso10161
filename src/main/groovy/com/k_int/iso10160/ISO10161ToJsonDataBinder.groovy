@@ -45,6 +45,8 @@ public class ISO10161ToJsonDataBinder {
     /* Optional member Delivery_Service_type delivery_service */
     /* Optional member Delivery_Address_type billing_address */
     /* Mandatory member java.util.Vector iLL_service_type */
+    result['iLL_service_type'] = bindILLServiceType(request.iLL_service_type);
+
     /* Optional member EXTERNAL_type responder_specific_service */
     /* Mandatory member Requester_Optional_Messages_Type_type requester_optional_messages */
     /* Optional member Search_Type_type search_type */
@@ -212,5 +214,29 @@ public class ISO10161ToJsonDataBinder {
     if ( item_id.verification_reference_source ) result.verification_reference_source = item_id.verification_reference_source.o?.toString();
 
     result;
+  }
+
+  public static List bindILLServiceType(java.util.Vector service_types) {
+    def result = new java.util.ArrayList();
+    service_types.each { st ->
+      switch( st.intValue() ) {
+        case 1:
+          result.add('loan');
+          break;
+        case 2:
+          result.add('copy-non-returnable');
+          break;
+        case 3:
+          result.add('locations');
+          break;
+        case 4:
+          result.add('estimate');
+          break;
+        case 5:
+          result.add('responder-specific');
+          break;
+      }
+    }
+    return result;
   }
 }
