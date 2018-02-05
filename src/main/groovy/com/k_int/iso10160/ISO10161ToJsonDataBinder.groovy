@@ -39,7 +39,7 @@ public class ISO10161ToJsonDataBinder {
     if ( request.responder_id ) result['responder_id'] = bindSystemId(request.responder_id);
 
     /* Mandatory member java.math.BigInteger transaction_type */
-    if ( request.transaction_type ) result['transaction_type'] = request.transaction_type;
+    if ( request.transaction_type ) result['transaction_type'] = bindTransactionType(request.transaction_type);
 
     /* Optional member Delivery_Address_type delivery_address */
     /* Optional member Delivery_Service_type delivery_service */
@@ -250,6 +250,22 @@ public class ISO10161ToJsonDataBinder {
     result.can_send_RETURNED = requester_optional_messages.can_send_RETURNED;
     result.requester_SHIPPED = requester_optional_messages.requester_SHIPPED;
     result.requester_CHECKED_IN = requester_optional_messages.requester_CHECKED_IN;
+    return result;
+  }
+
+  public static String bindTransactionType(BigInteger transaction_type) {
+    String result = null;
+    switch ( transaction_type.intValue() ) {
+      case 1:
+        result = 'simple';
+        break;
+      case 2:
+        result = 'chained';
+        break;
+      case 3:
+        result = 'partitioned';
+        break;
+    }
     return result;
   }
 }

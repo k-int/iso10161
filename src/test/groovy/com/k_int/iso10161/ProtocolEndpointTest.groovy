@@ -98,11 +98,11 @@ class ProtocolEndpointTest extends Specification {
                   institution_symbol:'ILLTEST-local-002'
                 ]
               ],
-              transaction_type:BigInteger.valueOf(1),  // 1:Simple, 2:Chained, 3:Partitioned
+              transaction_type:'simple',  // Understands 1,2,3 or "simple", "chained", "partitioned". 1:Simple, 2:Chained, 3:Partitioned
               iLL_service_type:['loan','copy-non-returnable','locations','estimate','responder-specific'],
               requester_optional_messages:[
-                can_send_RECEIVED:Boolean.TRUE,
-                can_send_RETURNED:Boolean.TRUE,
+                can_send_RECEIVED:true,
+                can_send_RETURNED:true,
                 requester_SHIPPED:new BigInteger(2),  // 1=Requires,2=Desires,3=Neither
                 requester_CHECKED_IN:new BigInteger(2)  // 1=Requires,2=Desires,3=Neither
               ],
@@ -143,6 +143,7 @@ class ProtocolEndpointTest extends Specification {
       // We got as many incoming fields as we sent, and that the titles match - We really should 
       // Do a deep comparison here
       received_request.size() == source_request.size();
+      received_request.request.transaction_type.equals('simple');
       received_request.request.item_id.title.equals(source_request.request.item_id.title);
       received_request.request.requester_id?.person_or_institution_symbol.institution_symbol.equals('ILLTEST-local-001');
       received_request.request.responder_id?.person_or_institution_symbol.institution_symbol.equals('ILLTEST-local-002');

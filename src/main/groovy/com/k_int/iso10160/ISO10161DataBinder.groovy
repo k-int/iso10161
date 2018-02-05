@@ -52,7 +52,7 @@ public class ISO10161DataBinder {
     result.responder_id = bindSystemId(message_data.responder_id);   
 
     /* Mandatory java.math.BigInteger transaction_type */
-    result.transaction_type = bindBigInteger(message_data.transaction_type);
+    result.transaction_type = bindTransactionType(message_data.transaction_type);
 
     /* Optional Delivery_Address_type delivery_address */
     /* Optional Delivery_Service_type delivery_service */
@@ -324,6 +324,26 @@ public class ISO10161DataBinder {
     }
     else {
       result = new Boolean(value);
+    }
+    return result;
+  }
+
+  public static BigInteger bindTransactionType(Object transaction_type) {
+    // // 1:Simple, 2:Chained, 3:Partitioned
+    BigInteger result = null;
+    switch ( transaction_type.toString().toLowerCase() ) {
+      case 'simple':
+      case '1':
+        result = new BigInteger(1);
+        break;
+      case 'chained':
+      case '2':
+        result = new BigInteger(2);
+        break;
+      case 'partitioned':
+      case '3':
+        break;
+        result = new BigInteger(3);
     }
     return result;
   }
