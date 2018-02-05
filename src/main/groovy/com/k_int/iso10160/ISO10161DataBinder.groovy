@@ -36,7 +36,7 @@ public class ISO10161DataBinder {
     /* Mandatory Transaction_Id_type transaction_id */
     if ( message_data.transaction_id ) {
       result.transaction_id = new Transaction_Id_type();
-      result.transaction_id.initial_requester_id = bindSystemIdType(message_data.transaction_id.initial_requester_id);
+      result.transaction_id.initial_requester_id = bindSystemId(message_data.transaction_id.initial_requester_id);
       result.transaction_id.transaction_group_qualifier = bindILLString(message_data.transaction_id.transaction_group_qualifier);
       result.transaction_id.transaction_qualifier = bindILLString(message_data.transaction_id.transaction_qualifier);
       result.transaction_id.sub_transaction_qualifier = bindILLString(message_data.transaction_id.sub_transaction_qualifier);
@@ -97,16 +97,6 @@ public class ISO10161DataBinder {
     return result;
   }
 
-  public static System_Id_type bindSystemIdType(Map message_data) {
-    System_Id_type result = null;
-    if ( message_data) {
-      result = new System_Id_type()
-      result.person_or_institution_symbol = null;
-      result.name_of_person_or_institution = null;
-    }
-    return result;
-  }
-
   public static ILL_String_type bindILLString(String value) {
     def result = null;
     if ( value ) {
@@ -164,13 +154,13 @@ public class ISO10161DataBinder {
     Person_Or_Institution_Symbol_type result = null;
     if ( message_data ) {
       result = new Person_Or_Institution_Symbol_type();
-      if ( message_data.personSymbol ) {
+      if ( message_data.person_symbol ) {
         result.which = Person_Or_Institution_Symbol_type.person_symbol_CID;
-        result.o = bindILLString(message_data.personSymbol);
+        result.o = bindILLString(message_data.person_symbol);
       }
-      else if ( message_data.institutionSymbol ) {
+      else if ( message_data.institution_symbol ) {
         result.which = Person_Or_Institution_Symbol_type.institution_symbol_CID;
-        result.o = bindILLString(message_data.institutionSymbol);
+        result.o = bindILLString(message_data.institution_symbol);
       }
     }
     return result;
@@ -180,13 +170,13 @@ public class ISO10161DataBinder {
     Name_Of_Person_Or_Institution_type result = null;
     if ( message_data ) {
       result = new Name_Of_Person_Or_Institution_type();
-      if ( message_data.personName ) {
+      if ( message_data.person_name ) {
         result.which = Name_Of_Person_Or_Institution_type.person_symbol_CID;
-        result.o = bindILLString(message_data.personName)
+        result.o = bindILLString(message_data.person_name)
       }
-      else if ( message_data.institutionName ) {
+      else if ( message_data.institution_name ) {
         result.which = Name_Of_Person_Or_Institution_type.institution_symbol_CID
-        result.o = bindILLString(message_data.institutionName);
+        result.o = bindILLString(message_data.institution_name);
       }
     }
     return result;

@@ -88,6 +88,16 @@ class ProtocolEndpointTest extends Specification {
                 date_time_of_this_service:[date:'20170101', time:'0000'],
                 date_time_of_original_service:[date:'20180101',time:'1111'],
               ],
+              requester_id:[
+                person_or_institution_symbol:[
+                  institution_symbol:'ILLTEST-local-001'
+                ]
+              ],
+              responder_id:[
+                person_or_institution_symbol:[
+                  institution_symbol:'ILLTEST-local-002'
+                ]
+              ],
               transaction_type:BigInteger.valueOf(1),  // 1:Simple, 2:Chained, 3:Partitioned
               iLL_service_type:['loan','copy-non-returnable','locations','estimate','responder-specific'],
               requester_optional_messages:[
@@ -125,7 +135,7 @@ class ProtocolEndpointTest extends Specification {
       assert num_apdus == received_apdus.size()
 
       Map received_request = ISO10161ToJsonDataBinder.toJson(received_apdus.get(0));
-      logger.debug("Json version: ${received_request}");
+      logger.debug("Received message as JSON: ${received_request}");
 
 
     expect:
@@ -133,6 +143,8 @@ class ProtocolEndpointTest extends Specification {
       // Do a deep comparison here
       received_request.size() == source_request.size();
       received_request.request.item_id.title.equals(source_request.request.item_id.title);
+      received_request.request.requester_id?.person_or_institution_symbol.institution_symbol.equals('ILLTEST-local-001');
+      received_request.request.responder_id?.person_or_institution_symbol.institution_symbol.equals('ILLTEST-local-002');
 
     cleanup:
       logger.debug("Shutdown protocol server (And wait for it to complete)");
