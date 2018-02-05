@@ -111,7 +111,8 @@ class ProtocolEndpointTest extends Specification {
                 title:'A test title'
               ],
               retry_flag:false,
-              forward_flag:false
+              forward_flag:false,
+              requester_note:'ILLTEST-CASE-001'
             ]];
 
       logger.debug("Send int value 1002");
@@ -145,6 +146,7 @@ class ProtocolEndpointTest extends Specification {
       received_request.request.item_id.title.equals(source_request.request.item_id.title);
       received_request.request.requester_id?.person_or_institution_symbol.institution_symbol.equals('ILLTEST-local-001');
       received_request.request.responder_id?.person_or_institution_symbol.institution_symbol.equals('ILLTEST-local-002');
+      received_request.request.requester_note.equals('ILLTEST-CASE-001');
 
     cleanup:
       logger.debug("Shutdown protocol server (And wait for it to complete)");
