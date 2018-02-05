@@ -106,7 +106,7 @@ class ProtocolEndpointTest extends Specification {
                 requester_SHIPPED:'desires',  // 1=Requires,2=Desires,3=Neither
                 requester_CHECKED_IN:'desires'  // 1=Requires,2=Desires,3=Neither
               ],
-              place_on_hold: new BigInteger(3),  // 1=Yes,2=No,3=According to policy
+              place_on_hold: 'according_to_policy',  // 1="yes",2="no",3="according_to_policy"
               item_id:[
                 title:'A test title'
               ],

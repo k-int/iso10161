@@ -54,7 +54,7 @@ public class ISO10161ToJsonDataBinder {
     /* Optional member Search_Type_type search_type */
     /* Optional member java.util.Vector supply_medium_info_type */
     /* Mandatory member java.math.BigInteger place_on_hold */
-    result['place_on_hold'] = request.place_on_hold;
+    result['place_on_hold'] = bindPlaceOnHold(request.place_on_hold);
 
     /* Optional member Client_Id_type client_id */
     /* Mandatory member Item_Id_type item_id */
@@ -280,6 +280,22 @@ public class ISO10161ToJsonDataBinder {
         break;
       case 3:
         result = 'neither';
+        break;
+    }
+    return result;
+  }
+
+  public static String bindPlaceOnHold(BigInteger poh) {
+    String result = null;
+    switch ( poh.intValue() ) {
+      case 1:
+        result = 'yes';
+        break;
+      case 2:
+        result = 'no';
+        break;
+      case 3:
+        result = 'according_to_policy';
         break;
     }
     return result;

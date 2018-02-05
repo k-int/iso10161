@@ -70,7 +70,7 @@ public class ISO10161DataBinder {
     /* Optional java.util.Vector supply_medium_info_type */
 
     /* Mandatory java.math.BigInteger place_on_hold */
-    result.place_on_hold = bindBigInteger(message_data.place_on_hold);
+    result.place_on_hold = bindPlaceOnHold(message_data.place_on_hold);
 
     /* Optional Client_Id_type client_id */
 
@@ -342,8 +342,8 @@ public class ISO10161DataBinder {
         break;
       case 'partitioned':
       case '3':
-        break;
         result = new BigInteger(3);
+        break;
     }
     return result;
   }
@@ -362,10 +362,30 @@ public class ISO10161DataBinder {
         break;
       case 'neither':
       case '3':
-        break;
         result = new BigInteger(3);
+        break;
     }
     return result;
+  }
 
+  public static BigInteger bindPlaceOnHold(Object poh) {
+    BigInteger result = null;
+    // 1=Yes,2=No,3=According to policy
+    switch ( poh.toString().toLowerCase() ) {
+      case 'yes':
+      case '1':
+        result = new BigInteger(1);
+        break;
+      case 'no':
+      case '2':
+        result = new BigInteger(2);
+        break;
+      case 'according_to_policy':
+      case 'by_policy':
+      case '3':
+        result = new BigInteger(3);
+        break; 
+    }
+    return result;
   }
 }
