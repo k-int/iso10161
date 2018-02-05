@@ -309,10 +309,10 @@ public class ISO10161DataBinder {
       result.can_send_RETURNED = bindBoolean(message_data.can_send_RETURNED);
 
       /* Mandatory BigInteger requester_SHIPPED */
-      result.requester_SHIPPED = bindBigInteger(message_data.requester_SHIPPED);
+      result.requester_SHIPPED = bindOptionalMessageType(message_data.requester_SHIPPED);
 
       /* Mandatory BigInteger requester_CHECKED_IN */
-      result.requester_CHECKED_IN = bindBigInteger(message_data.requester_CHECKED_IN);
+      result.requester_CHECKED_IN = bindOptionalMessageType(message_data.requester_CHECKED_IN);
     }
     return result;
   }
@@ -346,5 +346,26 @@ public class ISO10161DataBinder {
         result = new BigInteger(3);
     }
     return result;
+  }
+
+  public static BigInteger bindOptionalMessageType(Object omt) {
+    // 1=Requires,2=Desires,3=Neither
+    BigInteger result = null;
+    switch ( omt.toString().toLowerCase() ) {
+      case 'requires':
+      case '1':
+        result = new BigInteger(1);
+        break;
+      case 'desires':
+      case '2':
+        result = new BigInteger(2);
+        break;
+      case 'neither':
+      case '3':
+        break;
+        result = new BigInteger(3);
+    }
+    return result;
+
   }
 }

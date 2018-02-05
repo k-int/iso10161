@@ -103,8 +103,8 @@ class ProtocolEndpointTest extends Specification {
               requester_optional_messages:[
                 can_send_RECEIVED:true,
                 can_send_RETURNED:true,
-                requester_SHIPPED:new BigInteger(2),  // 1=Requires,2=Desires,3=Neither
-                requester_CHECKED_IN:new BigInteger(2)  // 1=Requires,2=Desires,3=Neither
+                requester_SHIPPED:'desires',  // 1=Requires,2=Desires,3=Neither
+                requester_CHECKED_IN:'desires'  // 1=Requires,2=Desires,3=Neither
               ],
               place_on_hold: new BigInteger(3),  // 1=Yes,2=No,3=According to policy
               item_id:[
@@ -148,6 +148,8 @@ class ProtocolEndpointTest extends Specification {
       received_request.request.requester_id?.person_or_institution_symbol.institution_symbol.equals('ILLTEST-local-001');
       received_request.request.responder_id?.person_or_institution_symbol.institution_symbol.equals('ILLTEST-local-002');
       received_request.request.requester_note.equals('ILLTEST-CASE-001');
+      received_request.request.requester_optional_messages.requester_SHIPPED.equals('desires');
+      received_request.request.requester_optional_messages.requester_CHECKED_IN.equals('desires');
 
     cleanup:
       logger.debug("Shutdown protocol server (And wait for it to complete)");

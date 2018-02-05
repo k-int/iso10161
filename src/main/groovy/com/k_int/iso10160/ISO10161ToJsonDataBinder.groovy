@@ -248,8 +248,8 @@ public class ISO10161ToJsonDataBinder {
     Map result = new java.util.HashMap();
     result.can_send_RECEIVED = requester_optional_messages.can_send_RECEIVED;
     result.can_send_RETURNED = requester_optional_messages.can_send_RETURNED;
-    result.requester_SHIPPED = requester_optional_messages.requester_SHIPPED;
-    result.requester_CHECKED_IN = requester_optional_messages.requester_CHECKED_IN;
+    result.requester_SHIPPED = bindOptionalMessageType(requester_optional_messages.requester_SHIPPED);
+    result.requester_CHECKED_IN = bindOptionalMessageType(requester_optional_messages.requester_CHECKED_IN);
     return result;
   }
 
@@ -268,4 +268,21 @@ public class ISO10161ToJsonDataBinder {
     }
     return result;
   }
+
+  public static String bindOptionalMessageType(BigInteger omt) {
+    String result = null;
+    switch ( omt.intValue() ) {
+      case 1:
+        result = 'requires';
+        break;
+      case 2:
+        result = 'desires';
+        break;
+      case 3:
+        result = 'neither';
+        break;
+    }
+    return result;
+  }
+
 }
