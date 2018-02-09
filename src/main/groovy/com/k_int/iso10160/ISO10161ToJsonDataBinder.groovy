@@ -15,12 +15,21 @@ public class ISO10161ToJsonDataBinder {
 
     switch ( apdu.which ) {
       case ILL_APDU_type.ill_request_var_CID:
-        result = [ request : bindRequest((ILL_Request_type)(apdu.o)) ]
+        def request_as_json = bindRequest((ILL_Request_type)(apdu.o));
+        def participant_info = extractRequestAddressInfo(request_as_json);
+        result = [ request : request_as_json, participantInfo:participant_info ]
         break;
       default:
         throw new RuntimeException("Unhandled apdu which value ${apdu.which}");
     }
 
+    return result;
+  }
+
+  public static Map extractRequestAddressInfo(Map request) {
+    Map result = [:]
+    result.sender = request.requester_id.person_or_institution_symbol;
+    result.recipient = request.responder_id.person_or_institution_symbol;
     return result;
   }
 
