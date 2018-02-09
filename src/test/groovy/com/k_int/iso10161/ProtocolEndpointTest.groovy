@@ -141,8 +141,12 @@ class ProtocolEndpointTest extends Specification {
 
     expect:
       // We got as many incoming fields as we sent, and that the titles match - We really should 
-      // Do a deep comparison here
-      received_request.size() == source_request.size();
+      // Do a deep comparison here. Received request should consist of 2 memebers : the request and the participantInfo
+      received_request.size() == 2;
+      received_request.request != null;
+      received_request.participantInfo != null;
+      received_request.participantInfo.sender.institution_symbol.equals('ILLTEST-local-001');
+      received_request.participantInfo.recipient.institution_symbol.equals('ILLTEST-local-002');
       received_request.request.transaction_type.equals('simple');
       received_request.request.item_id.title.equals(source_request.request.item_id.title);
       received_request.request.requester_id?.person_or_institution_symbol.institution_symbol.equals('ILLTEST-local-001');
