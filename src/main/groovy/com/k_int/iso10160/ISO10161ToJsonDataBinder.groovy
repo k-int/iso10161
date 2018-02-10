@@ -29,9 +29,9 @@ public class ISO10161ToJsonDataBinder {
   public static Map extractRequestAddressInfo(Map request) {
     Map result = [:]
     result.sender = request.requester_id.person_or_institution_symbol;
-    result.sender_event = 'ILLind';
+    result.sender_event = 'ILLreq';
     result.recipient = request.responder_id.person_or_institution_symbol;
-    result.recipient_event = 'ILLind';
+    result.recipient_event = 'ILL';
     return result;
   }
 

@@ -1,0 +1,62 @@
+{
+  "states":[
+    { "name":"Idle","code":"IDLE" },
+    { "name":"Pending","code":"PENDING" },
+    { "name":"Not Supplied", "code":"NOTSUPPLIED" },
+    { "name":"Conditional","code":"CONDITIIONAL" },
+    { "name":"Cancel Pending","code":"CANCELPENDING" },
+    { "name":"Cancelled","code":"CANCELLED" },
+    { "name":"Shipped","code":"SHIPPED" },
+    { "name":"Received","code":"RECEIVED" },
+    { "name":"Renew Pending","code":"RENEWPENDING" },
+    { "name":"Renew Overdue","code":"RENEWOVERDUE" },
+    { "name":"Overdue","code":"OVERDUE" },
+    { "name":"Not Received/Overdue","code":"NOTREC/OVERDUE" },
+    { "name":"Recall","code":"RECALL" },
+    { "name":"Returned","code":"RETURNED" },
+    { "name":"Lost","code":"LOST" },
+    { "name":"In Process","code":"IN-PROCESS" },
+    { "name":"Forward","code":"FORWARD" },
+    { "name":"Checked In","code":"CHECKEDIN" }
+  ],
+  "stateModels":[
+    {
+      "StateModel":"requester_processing_phase",
+      "Transistions":[
+        { "startState":"IDLE",            "event":"ILLreq",       "resultState":"PENDING" },
+        { "startState":"PENDING",         "event":"ILLreq",       "resultState":"PENDING" },
+        { "startState":"CONDITIONAL",     "event":"C-REPreq+",    "resultState":"PENDING" },
+        { "startState":"PENDING",         "event":"C-REPreq+",    "resultState":"PENDING" },
+        { "startState":"CONDITIONAL",     "event":"C-REPreq-",    "resultState":"NOTSUPPLIED" },
+        { "startState":"PENDING",         "event":"C-REPreq-",    "resultState":"NOTSUPPLIED" },
+        { "startState":"PENDING",         "event":"CANreq",       "resultState":"CANCELPENDING" },
+        { "startState":"CANCELPENDING",   "event":"CANreq",       "resultState":"CANCELPENDING" }
+      ]
+    },
+    {
+      "StateModel":"responder_processing_phase",
+      "Transistions":[
+        { "startState":"IDLE",            "event":"ILL",          "resultState":"IN-PROCESS" },
+        { "startState":"IN-PROCESS",      "event":"ILL",          "resultState":"IN-PROCESS" },
+        { "startState":"NOTSUPPLIED",     "event":"ILL",          "resultState":"NOTSUPPLIED" },
+        { "startState":"CONDITIONAL",     "event":"ILL",          "resultState":"CONDITIONAL" },
+        { "startState":"FORWARD",         "event":"ILL",          "resultState":"FORWARD" }
+      ]
+    },
+    {
+      "StateModel":"requester_tracking_phase",
+      "Transistions":[
+      ]
+    },
+    {
+      "StateModel":"requester_tracking_phase",
+      "Transistions":[
+      ]
+    },
+    {
+      "StateModel":"intermediary",
+      "Transistions":[
+      ]
+    }
+  ]
+}
