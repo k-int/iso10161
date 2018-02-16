@@ -66,10 +66,13 @@ task compileASN() {
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "file://~/.m2/repository/")
+            repository(url: "http://nexus.k-int.com/content/repositories/releases/") {
+                authentication(userName: knowintNexusUser, password: knowintNexusPass)
+            }
         }
     }
 }
+
 
 test {
     systemProperties 'logback.configurationFile' : new File(projectDir,'src/test/resources/logback-test.xml').absolutePath
