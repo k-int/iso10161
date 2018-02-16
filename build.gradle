@@ -9,6 +9,9 @@ buildscript {
   repositories {
     mavenCentral()
     mavenLocal()
+    maven {
+      url 'http://nexus.k-int.com/content/repositories/releases'
+    }
   }
   dependencies {
     classpath group: 'com.k_int', name: 'A2J', version: '1.0.2'
