@@ -18,6 +18,9 @@ buildscript {
 repositories {
     mavenCentral()
     mavenLocal()
+    maven {
+      url 'http://nexus.k-int.com/content/repositories/releases'
+    }
 }
 
 dependencies {
