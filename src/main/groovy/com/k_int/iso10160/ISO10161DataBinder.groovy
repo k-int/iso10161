@@ -21,6 +21,10 @@ public class ISO10161DataBinder {
       result.which = ILL_APDU_type.ill_request_var_CID;
       result.o = bindRequest(message_data.request);
     }
+    else if ( message_data.shipped ) {
+      result.which = ILL_APDU_type.ill_shipped_var_CID;
+      result.o = bindShipped(message_data.shipped);
+    }
     else {
       throw new RuntimeException('Unhandled root message type: '+message_data.keySet());
     }
@@ -31,16 +35,10 @@ public class ISO10161DataBinder {
   public static ILL_Request_type bindRequest(Map message_data) {
     ILL_Request_type result = new ILL_Request_type()
 
-    if ( message_data.protocol_version_num ) result.protocol_version_num = bindBigInteger(message_data.protocol_version_num);
+    if ( message_data.protocol_version_num ) 
+      result.protocol_version_num = bindBigInteger(message_data.protocol_version_num);
 
-    /* Mandatory Transaction_Id_type transaction_id */
-    if ( message_data.transaction_id ) {
-      result.transaction_id = new Transaction_Id_type();
-      result.transaction_id.initial_requester_id = bindSystemId(message_data.transaction_id.initial_requester_id);
-      result.transaction_id.transaction_group_qualifier = bindILLString(message_data.transaction_id.transaction_group_qualifier);
-      result.transaction_id.transaction_qualifier = bindILLString(message_data.transaction_id.transaction_qualifier);
-      result.transaction_id.sub_transaction_qualifier = bindILLString(message_data.transaction_id.sub_transaction_qualifier);
-    }
+    result.transaction_id = bindTransactionId(message_data.transaction_id);
 
     /* Mandatory Service_Date_Time_type service_date_time */
     result.service_date_time = bindServiceDateTime(message_data.service_date_time);
@@ -97,12 +95,53 @@ public class ISO10161DataBinder {
     return result;
   }
 
+  public static Shipped_type bindShipped(Map message_data) {
+    Shipped_type result = new Shipped_type()
+
+    /*protocol-version-num    [0]     IMPLICIT INTEGER { version-1 (1), version-2 (2) }, */
+    if ( message_data.protocol_version_num ) result.protocol_version_num = bindBigInteger(message_data.protocol_version_num);
+    /*transaction-id  [1]     IMPLICIT Transaction-Id, */
+    result.transaction_id = bindTransactionId(message_data.transaction_id);
+
+    /*service-date-time       [2]     IMPLICIT Service-Date-Time, */
+    /*requester-id    [3]     IMPLICIT System-Id OPTIONAL, */
+    /*responder-id    [4]     IMPLICIT System-Id OPTIONAL, */
+    /*responder-address       [24]    IMPLICIT System-Address OPTIONAL, */
+    /*intermediary-id [25]    IMPLICIT System-Id OPTIONAL, */
+    /*supplier-id     [26]    IMPLICIT System-Id OPTIONAL, */
+     /*client-id       [15]    IMPLICIT Client-Id OPTIONAL, */
+    /*transaction-type        [5]     IMPLICIT Transaction-Type DEFAULT 1, */
+    /*supplemental-item-description   [17]    IMPLICIT Supplemental-Item-Description OPTIONAL, */
+    /*shipped-service-type    [27]    IMPLICIT Shipped-Service-Type, */
+    /*responder-optional-messages     [28]    IMPLICIT Responder-Optional-Messages-Type OPTIONAL, */
+    /*supply-details  [29]    IMPLICIT Supply-Details, */
+    /*return-to-address       [30]    IMPLICIT Postal-Address OPTIONAL, */
+    /*responder-note  [46]    ILL-String OPTIONAL, */
+    /*shipped-extensions      [49]    IMPLICIT SEQUENCE OF Extension OPTIONAL */
+    return result;
+  }
+
   public static ILL_String_type bindILLString(String value) {
     def result = null;
     if ( value ) {
       result =  new ILL_String_type();
       result.which = ILL_String_type.generalstring_var_CID;
       result.o = value;
+    }
+    return result;
+  }
+
+  public static Transaction_Id_type bindTransactionId(Map message_data) {
+
+    Transaction_Id_type result = null;
+
+    /* Mandatory Transaction_Id_type transaction_id */
+    if ( message_data ) {
+      result = new Transaction_Id_type();
+      result.initial_requester_id = bindSystemId(message_data.initial_requester_id);
+      result.transaction_group_qualifier = bindILLString(message_data.transaction_group_qualifier);
+      result.transaction_qualifier = bindILLString(message_data.transaction_qualifier);
+      result.sub_transaction_qualifier = bindILLString(message_data.sub_transaction_qualifier);
     }
     return result;
   }
