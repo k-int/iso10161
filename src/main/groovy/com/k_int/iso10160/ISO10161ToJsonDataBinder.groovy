@@ -5,6 +5,54 @@ import com.k_int.iso10161.ISO_10161_ILL_1.*;
 
 public class ISO10161ToJsonDataBinder {
 
+  // Based on the APDU, generate an indication code
+  public static String getIndicationCode(ILL_APDU_type apdu) {
+    String result = null;
+    switch ( apdu.which ) {
+      case ILL_APDU_type.ill_request_var_CID:
+        result = 'ILLind'; break;
+      case ILL_APDU_type.forward_notification_var_CID:
+        result = 'FWDind'; break;
+      case ILL_APDU_type.shipped_var_CID:
+        result = 'SHIind'; break;
+      case ILL_APDU_type.ill_answer_var_CID:
+        result = 'ANSind'; break;
+      case ILL_APDU_type.conditional_reply_var_CID:
+        result = 'C-REPind'; break;
+      case ILL_APDU_type.cancel_var_CID:
+        result = 'CANind'; break;
+      case ILL_APDU_type.cancel_reply_var_CID:
+        result = 'CARind'; break;
+      case ILL_APDU_type.received_var_CID:
+        result = 'RECind'; break;
+      case ILL_APDU_type.recall_var_CID:
+        result = 'RC:ind'; break;
+      case ILL_APDU_type.returned_var_CID:
+        result = 'RETind'; break;
+      case ILL_APDU_type.checked_in_var_CID:
+        result = 'CHKind'; break;
+      case ILL_APDU_type.overdue_var_CID:
+        result = 'DUEind'; break;
+      case ILL_APDU_type.renew_var_CID:
+        result = 'RENind'; break;
+      case ILL_APDU_type.renew_answer_var_CID:
+        result = 'REAind'; break;
+      case ILL_APDU_type.lost_var_CID:
+        result = 'LSTind'; break;
+      case ILL_APDU_type.damaged_var_CID:
+        result = 'DAMind'; break;
+      case ILL_APDU_type.message_var_CID:
+        result = 'MSGind'; break;
+      case ILL_APDU_type.status_query_var_CID:
+        result = 'STQind'; break;
+      case ILL_APDU_type.status_or_error_report_var_CID:
+        result = 'STRind'; break;
+      case ILL_APDU_type.expired_var_CID:
+        result = 'EXPind'; break;
+    }
+    return result;
+  }
+
   /**
    * Accept an ILL APDU and convert to a JSON object which is a mirror of the JSON created by
    * ISO10161DataBinder
