@@ -18,3 +18,9 @@ The ASN.1 was compiled and added to the source tree with the following gradle co
 
 gradle -DCodecBasePackage=com.k_int.iso10161 compileASN
 
+# Release Process
+
+Update build.gradle with appropriate versions
+gradle build
+gradle install (Install in local jar cache)
+gradle uploadArchives  (Deploy to k-int nexus)
