@@ -71,6 +71,7 @@ public class ISO10161DataBinder {
     result.place_on_hold = bindPlaceOnHold(message_data.place_on_hold);
 
     /* Optional Client_Id_type client_id */
+    result.client_id = bindClientId(message_data.client_id);
 
     /* Mandatory Item_Id_type item_id */
     result.item_id = bindItemId(message_data.item_id);
@@ -221,6 +222,17 @@ public class ISO10161DataBinder {
     return result;
   }
   
+  public static Client_Id_type bindClientId(Map message_data) {
+    Client_Id_type result = null;
+    if ( message_data ) {
+      result = new Client_Id_type();
+      result.client_name = bindILLString(message_data.client_name);
+      result.client_status = bindILLString(message_data.client_status);
+      result.client_identifier = bindILLString(message_data.client_identifier);
+    }
+    return result;
+  }
+
   public static Item_Id_type bindItemId(Map message_data) {
     Item_Id_type result = null;
 

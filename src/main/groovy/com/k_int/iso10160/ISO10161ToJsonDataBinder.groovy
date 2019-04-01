@@ -116,6 +116,8 @@ public class ISO10161ToJsonDataBinder {
     result['place_on_hold'] = bindPlaceOnHold(request.place_on_hold);
 
     /* Optional member Client_Id_type client_id */
+    if ( request.client_id ) result.client_id = bindClientId(request.client_id);
+
     /* Mandatory member Item_Id_type item_id */
     if ( request.item_id ) result.item_id = bindItemId(request.item_id);
 
@@ -201,6 +203,14 @@ public class ISO10161ToJsonDataBinder {
       result.date_time_of_original_service = dtos;
     }
 
+    result;
+  }
+
+  public static Map bindClientId(Client_Id_type client_id) {
+    Map result = new java.util.HashMap();
+    if ( client_id.client_name ) result.client_name = client_id.client_name.o?.toString();
+    if ( client_id.client_status ) result.client_status = client_id.client_status.o?.toString();
+    if ( client_id.client_identifier ) result.client_identifier = client_id.client_identifier.o?.toString();
     result;
   }
 
