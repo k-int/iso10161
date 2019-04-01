@@ -39,7 +39,7 @@ def generatedSrcDir = new File(buildDir, "generated/src/main/java/")
 
 group = 'com.k_int'
 sourceCompatibility = 1.8
-version = '1.0.1'
+version = '1.0.2'
 jar {
     manifest {
         attributes 'Implementation-Title': 'Gradle Quickstart',
