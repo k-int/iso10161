@@ -232,7 +232,7 @@ public class ISO10161ToJsonDataBinder {
     if ( item_id.place_of_publication ) result.place_of_publication = item_id.place_of_publication.o?.toString();
 
     /* Optional ILL_String_type publisher */
-    if ( item_id.publisher ) result.publisher = item_id.publisher.o?.toString;
+    if ( item_id.publisher ) result.publisher = item_id.publisher.o?.toString();
 
     /* Optional ILL_String_type series_title_number */
     if ( item_id.series_title_number ) result.series_title_number = item_id.series_title_number.o?.toString();
