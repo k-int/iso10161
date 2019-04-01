@@ -99,6 +99,44 @@ class ProtocolEndpointTest extends Specification {
                 ]
               ],
               transaction_type:'simple',  // Understands 1,2,3 or "simple", "chained", "partitioned". 1:Simple, 2:Chained, 3:Partitioned
+              delivery_address:[
+                postal_address:[
+                  name_of_person_or_institution:[
+                  ],
+                  extended_postal_delivery_address:'extended_postal_delivery_address',
+                  street_and_number:'street_and_number',
+                  post_office_box:'post_office_box',
+                  city:'city',
+                  region:'region',
+                  country:'country',
+                  postal_code:'postal_code'
+                ],
+                electronic_address:[
+                  [
+                    e_delivery_service:[
+                    ],
+                    document_type:[
+                    ],
+                    e_delivery_description:'e-delivery-description',
+                    e_delivery_details:[
+                    ],
+                    name_or_code:'name_or_code'
+                  ]
+                ]
+              ],
+              billing_address:[
+                postal_address:[
+                  name_of_person_or_institution:[
+                  ],
+                  extended_postal_delivery_address:'extended_postal_delivery_address',
+                  street_and_number:'street_and_number',
+                  post_office_box:'post_office_box',
+                  city:'city',
+                  region:'region',
+                  country:'country',
+                  postal_code:'postal_code'
+                ]
+              ],
               iLL_service_type:['loan','copy-non-returnable','locations','estimate','responder-specific'],
               requester_optional_messages:[
                 can_send_RECEIVED:true,
@@ -107,12 +145,40 @@ class ProtocolEndpointTest extends Specification {
                 requester_CHECKED_IN:'desires'  // 1=Requires,2=Desires,3=Neither
               ],
               place_on_hold: 'according_to_policy',  // 1="yes",2="no",3="according_to_policy"
+              client_id:[
+                client_name:'Client Name',
+                client_status:'Client Status',
+                client_identifier:'Client Identifier'
+              ],
               item_id:[
-                title:'A test title'
+                item_type:1,
+                // held_medium_type
+                call_number:'A test call number',
+                author:'A test author',
+                title:'A test title',
+                sub_title:'A test sub title',
+                sponsoring_body:'A test sponsoring_body',
+                place_of_publication:'Test Place of pub',
+                publisher:'test publisher',
+                series_title_number:'Test series title number',
+                volume_issue:'test volume issue',
+                edition:'test edition',
+                publication_date:'Test pub date',
+                publication_date_of_component:'Test pubdate of component',
+                author_of_article:'Test author of article',
+                title_of_article:'Test title of article',
+                pagination:'Test pagination',
+                national_bibliography_no:'test national_bibliography_no',
+                isbn:'ISBN',
+                issn:'ISSN',
+                system_no:'System no',
+                additional_no_letters:'Additional no letters',
+                verification_reference_source:'verification-reference-source'
               ],
               retry_flag:false,
               forward_flag:false,
-              requester_note:'ILLTEST-CASE-001'
+              requester_note:'ILLTEST-CASE-001-requester-note',
+              forward_note:'ILLTEST-CASE-001-forward-note'
             ]];
 
       logger.debug("Send int value 1002");
@@ -151,7 +217,7 @@ class ProtocolEndpointTest extends Specification {
       received_request.request.item_id.title.equals(source_request.request.item_id.title);
       received_request.request.requester_id?.person_or_institution_symbol.institution_symbol.equals('ILLTEST-local-001');
       received_request.request.responder_id?.person_or_institution_symbol.institution_symbol.equals('ILLTEST-local-002');
-      received_request.request.requester_note.equals('ILLTEST-CASE-001');
+      received_request.request.requester_note.equals('ILLTEST-CASE-001-requester-note');
       received_request.request.requester_optional_messages.requester_SHIPPED.equals('desires');
       received_request.request.requester_optional_messages.requester_CHECKED_IN.equals('desires');
 
