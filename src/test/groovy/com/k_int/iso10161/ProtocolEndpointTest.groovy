@@ -111,13 +111,11 @@ class ProtocolEndpointTest extends Specification {
                   postal_code:'postal_code'
                 ],
                 electronic_address:[
-                  [
-                    e_delivery_service:[:],
-                    document_type:[:],
-                    e_delivery_description:'e-delivery-description',
-                    e_delivery_details:[:],
-                    name_or_code:'name_or_code'
-                  ]
+                  e_delivery_service:[:],
+                  document_type:[:],
+                  e_delivery_description:'e-delivery-description',
+                  e_delivery_details:[:],
+                  name_or_code:'name_or_code'
                 ]
               ],
               billing_address:[

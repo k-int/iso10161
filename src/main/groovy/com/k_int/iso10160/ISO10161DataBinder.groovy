@@ -156,7 +156,7 @@ public class ISO10161DataBinder {
     if ( message_data ) {
       result = new Delivery_Address_type()
       result.postal_address = bindPostalAddress(message_data.postal_address);
-      // result.electronic_address = bindElectronicAddress(message_data.electronic_address);
+      result.electronic_address = bindSystemAddress(message_data.electronic_address);
     }
 
     return result;
