@@ -53,8 +53,12 @@ public class ISO10161DataBinder {
     result.transaction_type = bindTransactionType(message_data.transaction_type);
 
     /* Optional Delivery_Address_type delivery_address */
+    result.delivery_address = bindDeliveryAddress(message_data.delivery_address);
+
     /* Optional Delivery_Service_type delivery_service */
+
     /* Optional Delivery_Address_type billing_address */
+    result.billing_address = bindDeliveryAddress(message_data.billing_address);
 
     /* Mandatory java.util.Vector iLL_service_type */
     result.iLL_service_type = bindIllService(message_data.iLL_service_type);
@@ -143,6 +147,43 @@ public class ISO10161DataBinder {
       result.transaction_group_qualifier = bindILLString(message_data.transaction_group_qualifier);
       result.transaction_qualifier = bindILLString(message_data.transaction_qualifier);
       result.sub_transaction_qualifier = bindILLString(message_data.sub_transaction_qualifier);
+    }
+    return result;
+  }
+
+  public static Delivery_Address_type bindDeliveryAddress(Map message_data) {
+    Delivery_Address_type result = null;
+    if ( message_data ) {
+      result = new Delivery_Address_type()
+      result.postal_address = bindPostalAddress(message_data.postal_address);
+      // result.electronic_address = bindElectronicAddress(message_data.electronic_address);
+    }
+
+    return result;
+  }
+
+  public static Postal_Address_type bindPostalAddress(Map message_data) {
+    Postal_Address_type result = null;
+    if ( message_data ) {
+      result = new Postal_Address_type();
+      // result.name_of_person_or_institution = bindNameOfPesonOrInstitution(message_data.name_of_person_or_institution)
+      result.extended_postal_delivery_address = bindILLString(message_data.extended_postal_delivery_address);
+      result.street_and_number = bindILLString(message_data.street_and_number);
+      result.post_office_box = bindILLString(message_data.post_office_box);
+      result.city = bindILLString(message_data.city);
+      result.region = bindILLString(message_data.region);
+      result.country = bindILLString(message_data.country);
+      result.postal_code = bindILLString(message_data.postal_code);
+    }
+    return result;
+  }
+
+  public static System_Address_type bindSystemAddress(Map message_data) {
+    System_Address_type result = null;
+    if ( message_data ) {
+      result = new System_Address_type();
+      result.telecom_service_identifier = bindILLString(message_data.telecom_service_identifier);
+      result.telecom_service_address = bindILLString(message_data.telecom_service_address);
     }
     return result;
   }

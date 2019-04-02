@@ -101,8 +101,7 @@ class ProtocolEndpointTest extends Specification {
               transaction_type:'simple',  // Understands 1,2,3 or "simple", "chained", "partitioned". 1:Simple, 2:Chained, 3:Partitioned
               delivery_address:[
                 postal_address:[
-                  name_of_person_or_institution:[
-                  ],
+                  name_of_person_or_institution:[:],
                   extended_postal_delivery_address:'extended_postal_delivery_address',
                   street_and_number:'street_and_number',
                   post_office_box:'post_office_box',
@@ -113,21 +112,17 @@ class ProtocolEndpointTest extends Specification {
                 ],
                 electronic_address:[
                   [
-                    e_delivery_service:[
-                    ],
-                    document_type:[
-                    ],
+                    e_delivery_service:[:],
+                    document_type:[:],
                     e_delivery_description:'e-delivery-description',
-                    e_delivery_details:[
-                    ],
+                    e_delivery_details:[:],
                     name_or_code:'name_or_code'
                   ]
                 ]
               ],
               billing_address:[
                 postal_address:[
-                  name_of_person_or_institution:[
-                  ],
+                  name_of_person_or_institution:[:],
                   extended_postal_delivery_address:'extended_postal_delivery_address',
                   street_and_number:'street_and_number',
                   post_office_box:'post_office_box',
